@@ -25,11 +25,11 @@ module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    filename: "./bundle[hash].js",
+    filename: "./js/bundle[hash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  devtool: false,
+  devtool: "source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     port: 3000,
@@ -70,7 +70,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "./[name].css",
+      filename: "./css/[name].css",
       ignoreOrder: true,
     }),
     new ImageMinimizerPlugin({
@@ -108,7 +108,12 @@ module.exports = {
       },
       {
         test: /.s?css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+          "postcss-loader",
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
