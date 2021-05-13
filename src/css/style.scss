@@ -1,0 +1,42 @@
+$testColor: red;
+body {
+  margin: 0;
+  padding: 0;
+  background: bisque;
+}
+body {
+  text-align: left;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  color: $testColor;
+}
+h1 {
+  font-size: 50px;
+}
+.card {
+  // its a card
+  &__title {
+    color: red;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.card__title {
+  display: flex;
+}
+.card__title {
+  background: green;
+}
+p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: green;
+  font-size: 50px;
+  transition: 0.3s;
+}
