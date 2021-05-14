@@ -1,0 +1,110 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+@for $i from 1 through 10 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon-sprite {
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  &__item {
+    box-sizing: border-box;
+    width: calc(25% - 1.5%);
+    margin-right: 2%;
+    margin-top: 2%;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.icon-font {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+html {
+  font-size: 16px;
+  @include bp(laptop-s) {
+    font-size: 14px;
+  }
+  @include bp(tablet-small-under) {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: 1.6rem;
+  background: #fff;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
+}
+
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1150px;
+  }
+  // 150 * 9px = 1350px -> laptop-s
+  @include bp(r-laptop-s) {
+    max-width: 140rem;
+  }
+  // 170 * 9px = 1530px -> desktop-m
+  @include bp(r-desktop-m) {
+    max-width: 150rem;
+  }
+  &--sm {
+    @media (min-width: 1200px) {
+      max-width: 1150px;
+    }
+    // 150 * 9px = 1350px -> laptop-s
+    @include bp(r-laptop-s) {
+      max-width: 100rem;
+    }
+    // 170 * 9px = 1530px -> desktop-m
+    @include bp(r-desktop-m) {
+      max-width: 131rem;
+    }
+  }
+}
+
+.section {
+  padding: 150px 0;
+
+  @include bp(tablet) {
+    padding: 100px 0;
+  }
+  @include bp(tablet-small) {
+    padding: 50px 0;
+  }
+}

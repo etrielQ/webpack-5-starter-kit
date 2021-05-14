@@ -1,4 +1,4 @@
-import css from "./css/style.scss";
+import css from "./scss/style.scss";
 // const $ = require("jquery");
 import icons from "./icons/icons";
 
