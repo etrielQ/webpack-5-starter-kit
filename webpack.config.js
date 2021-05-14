@@ -92,6 +92,11 @@ module.exports = {
         ],
       },
     }),
+    new HTMLWebpackPlugin({
+      filename: "./icons/icons-sprite.html",
+      template: "./src/icons/icons-sprite.pug",
+      inject: "body",
+    }),
   ].concat(htmlPlugins),
   module: {
     rules: [

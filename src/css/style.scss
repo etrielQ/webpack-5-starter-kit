@@ -41,6 +41,28 @@ p {
   transition: 0.3s;
 }
 
+.icon-sprite {
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  &__item {
+    box-sizing: border-box;
+    width: calc(25% - 1.5%);
+    margin-right: 2%;
+    margin-top: 2%;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.icon-sprite__name {
+}
+
 .icon {
   display: inline-block;
   width: 1em;
