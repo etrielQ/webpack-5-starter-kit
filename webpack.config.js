@@ -23,16 +23,19 @@ const htmlPlugins = generateHtmlPlugins("./src/template/pages");
 
 module.exports = {
   mode: "development",
+  target: "web",
   entry: "./src/js/index.js",
   output: {
     filename: "./js/bundle[hash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     clean: true,
   },
   devtool: "source-map",
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "public"),
+    watchContentBase: true,
     port: 3000,
+    hot: true,
     open: true,
   },
   optimization: {
