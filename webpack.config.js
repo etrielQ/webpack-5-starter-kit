@@ -32,7 +32,7 @@ module.exports = {
   },
   devtool: "source-map",
   devServer: {
-    contentBase: path.join(__dirname, "public"),
+    contentBase: "public",
     watchContentBase: true,
     port: 3000,
     hot: true,
@@ -41,8 +41,6 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // `...`,
       new CssMinimizerPlugin({
         minimizerOptions: {
           level: {
@@ -50,12 +48,7 @@ module.exports = {
               roundingPrecision: "all=3,px=5",
             },
           },
-          preset: [
-            "default",
-            {
-              discardComments: { removeAll: true },
-            },
-          ],
+          preset: ["default"],
         },
         minify: CssMinimizerPlugin.cssoMinify,
       }),
@@ -119,8 +112,8 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
-          "sass-loader",
           "postcss-loader",
+          "sass-loader",
         ],
       },
       {
