@@ -1,0 +1,18 @@
+extends ../layout/layoutMain
+block append vars
+    - var header = true;
+
+block append head
+    title Starter Kit - Parcel
+
+block content
+    h1#title ITS AN INDEX PAGE
+    p pug test 2
+    a(href="./about.html") Go to about page
+    span.icon.icon-font(data-icon-id="iconSearch")
+    span.icon.icon-font(data-icon-id="iconFacebook")
+    span.icon.icon-font(data-icon-id="iconArrow")
+    span.icon.icon-font(data-icon-id="iconPhone")
+    include ../components/index/index-section
+    img(src="../../images/opet.png", alt="")
+    img(src="../../images/alperencelik2021.jpg", alt="") 

@@ -1,0 +1,13 @@
+extends ../layout/layoutMain
+block append vars
+    - var header = false
+
+block append head
+    title Starter Kit - Parcel
+
+block content
+    h1#title ITS AN INDEX PAGE
+    p pug test 2
+    a(href="./index.html") Go to index page
+    include ../components/about/about-section
+    img(src="../../images/opet.png", alt="")

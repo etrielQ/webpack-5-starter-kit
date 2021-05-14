@@ -19,7 +19,7 @@ function generateHtmlPlugins(templateDir) {
   });
 }
 
-const htmlPlugins = generateHtmlPlugins("./src/template/views");
+const htmlPlugins = generateHtmlPlugins("./src/template/pages");
 
 module.exports = {
   mode: "development",
