@@ -1,6 +1,7 @@
-import css from "./scss/style.scss";
+import css from "../scss/style.scss";
 // const $ = require("jquery"); // if we need
-import icons from "./icons/icons";
+import icons from "../icons/icons";
+import * as main from "./main";
 
 function docReady(fn) {
   if (
@@ -13,7 +14,6 @@ function docReady(fn) {
   }
 }
 docReady(() => {
-  console.log("loaded");
   icons.forEach(iconSpriteFn);
   function iconSpriteFn(item, index) {
     const iconSprite = document.querySelector("#iconSprite");
@@ -42,4 +42,5 @@ docReady(() => {
       });
     }
   }
+  main;
 });

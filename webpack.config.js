@@ -23,7 +23,7 @@ const htmlPlugins = generateHtmlPlugins("./src/template/views");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/js/index.js",
   output: {
     filename: "./js/bundle[hash].js",
     path: path.resolve(__dirname, "dist"),
