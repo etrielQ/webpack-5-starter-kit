@@ -1,5 +1,5 @@
 import css from "./scss/style.scss";
-// const $ = require("jquery");
+// const $ = require("jquery"); // if we need
 import icons from "./icons/icons";
 
 function docReady(fn) {
@@ -12,7 +12,7 @@ function docReady(fn) {
     document.addEventListener("DOMContentLoaded", fn);
   }
 }
-docReady(function () {
+docReady(() => {
   console.log("loaded");
   icons.forEach(iconSpriteFn);
   function iconSpriteFn(item, index) {
@@ -34,7 +34,7 @@ docReady(function () {
 
     const icon = document.querySelectorAll(".icon");
     if (icon) {
-      Array.prototype.forEach.call(icon, function (el) {
+      Array.prototype.forEach.call(icon, (el) => {
         let dataIconId = el.getAttribute("data-icon-id");
         if (dataIconId == item.iconId) {
           el.innerHTML = item.iconSvg;
