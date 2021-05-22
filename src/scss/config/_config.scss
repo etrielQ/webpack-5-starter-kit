@@ -84,37 +84,64 @@ html {
   }
 }
 
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: $font-family-base;
   font-size: 1.6rem;
-  background: #fff;
-  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility !important;
 }
 
-.container {
-  @media (min-width: 1200px) {
-    max-width: 1150px;
+.container{
+  max-width: 1360px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--sm{
+   max-width: 1280px; 
   }
-  // 170 * 9px = 1530px -> desktop-m
-  @include bp(r-desktop-m) {
-    max-width: 1400px;
-  }
-  &--sm {
-    @media (min-width: 1200px) {
+
+  &,&--sm{
+    @include bp(laptop-l){
       max-width: 1150px;
     }
-    // 150 * 9px = 1350px -> laptop-s
-    @include bp(r-laptop-s) {
-      max-width: 100rem;
+    @include bp(desktop){
+      max-width: 960px;
     }
-    // 170 * 9px = 1530px -> desktop-m
-    @include bp(r-desktop-m) {
-      max-width: 131rem;
+    @include bp(tablet){
+      max-width: 720px;
+    }
+    @include bp(tablet-small){
+      max-width: 520px;
+    }
+    @include bp(mobile){
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include bp(mobile-x-small){
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
+}
+
+.container-test{
+  background: beige;
 }
 
 .section {

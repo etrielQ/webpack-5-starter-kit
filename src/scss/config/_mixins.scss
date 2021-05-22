@@ -47,14 +47,6 @@
     @media (max-width: 1200px) {
       @content;
     }
-  } @else if $point==nav {
-    @media (max-width: 900px) {
-      @content;
-    }
-  } @else if $point==r-nav {
-    @media (min-width: 900px) {
-      @content;
-    }
   } @else if $point==tablet-big {
     @media (max-width: 1024px) {
       @content;
@@ -67,10 +59,6 @@
     @media (max-width: 768px) {
       @content;
     }
-  } @else if $point==tablet-small-under {
-    @media (max-width: 767px) {
-      @content;
-    }
   } @else if $point==mobile {
     @media (max-width: 576px) {
       @content;
@@ -81,10 +69,6 @@
     }
   } @else if $point==r-tablet {
     @media (min-width: 993px) {
-      @content;
-    }
-  } @else if $point==ipad-vertical {
-    @media (min-width: 768px) and (max-width: 768px) {
       @content;
     }
   } @else if $point==r-tablet-small {

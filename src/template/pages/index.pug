@@ -7,7 +7,10 @@ block append head
 
 block content
     h1#title ITS AN INDEX PAGE
-    p pug test 2 its a test aaa
+    .container 
+        p.container-test pug test 2 its a test aaa
+    .container.container--sm
+        p.container-test pug test 2 its a test aaa
     a(href="./about.html") Go to about page
     span.icon.icon-font(data-icon-id="iconSearch")
     span.icon.icon-font(data-icon-id="iconFacebook")
@@ -15,5 +18,6 @@ block content
     span.icon.icon-font(data-icon-id="iconPhone")
     include ../components/index/index-section
     
-    img(src="../../images/opet.png", alt="")
-    img(src="../../images/alperencelik2021.jpg", alt="") 
+    .container
+        img(src="../../images/opet.png", style="width: 100%;" alt="")
+        img(src="../../images/alperencelik2021.jpg", style="width: 100%;" alt="")   
