@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const fs = require("fs");
 
 function generateHtmlPlugins(templateDir) {
@@ -31,13 +32,13 @@ module.exports = {
     clean: true,
   },
   devtool: "source-map",
-  devServer: {
-    contentBase: path.join(__dirname, "./public"),
-    watchContentBase: true,
-    port: 3000,
-    hot: true,
-    open: true,
-  },
+  // devServer: {
+  //   contentBase: path.join(__dirname, "./public"),
+  //   watchContentBase: true,
+  //   port: 3000,
+  //   hot: true,
+  //   open: true,
+  // },
   optimization: {
     minimize: true,
     minimizer: [
@@ -65,6 +66,13 @@ module.exports = {
     },
   },
   plugins: [
+    new BrowserSyncPlugin({
+      // browse to http://localhost:3000/ during development,
+      // ./public directory is being served
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['./public'] }
+    }),
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
       ignoreOrder: true,

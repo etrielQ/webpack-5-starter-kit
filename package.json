@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "webpack --watch",
     "build": "webpack",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "start": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "babel-loader": "^8.2.2",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^3.0.0",
@@ -41,6 +43,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "browser-sync": "^2.26.14",
     "jquery": "^3.6.0"
   }
 }
