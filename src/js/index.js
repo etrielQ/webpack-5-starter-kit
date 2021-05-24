@@ -1,7 +1,6 @@
 import css from "../scss/style.scss";
 // const $ = require("jquery"); // if we need
 import icons from "../icons/icons";
-import Swup from "swup";
 import * as main from "./main";
 
 function docReady(fn) {
@@ -43,6 +42,5 @@ docReady(() => {
       });
     }
   }
-  const swup = new Swup();
   main;
 });
