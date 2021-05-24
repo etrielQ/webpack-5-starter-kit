@@ -29,13 +29,15 @@ function docResized(fn) {
   window.addEventListener("resize", fn);
 }
 docReadied(() => {
-  const swup = new Swup();
+  const swup = new Swup({
+    cache: true,
+  });
   swup.on("contentReplaced", function () {
-    swup.options.containers.forEach((selector) => {
+    swup.options.containers.forEach(() => {
       app.init();
     });
   });
-  app.init();
+  swup.on("contentReplaced", app.init());
 });
 
 docResized(() => {

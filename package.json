@@ -43,6 +43,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@swup/overlay-theme": "^1.1.1",
     "jquery": "^3.6.0"
   }
 }
