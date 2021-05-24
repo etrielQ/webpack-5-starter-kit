@@ -37,7 +37,7 @@ docReadied(() => {
       app.init();
     });
   });
-  swup.on("contentReplaced", app.init());
+  app.init();
 });
 
 docResized(() => {
