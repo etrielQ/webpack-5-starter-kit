@@ -6,18 +6,21 @@ block append head
     title Starter Kit - Webpack 5
 
 block content
-    h1#title ITS AN INDEX PAGE
-    .container 
-        p.container-test pug test 2 its a test aaa
-    .container.container--sm
-        p.container-test pug test 2 its a test aaa
-    a(href="./about.html") Go to about page
-    span.icon.icon-font(data-icon-id="iconSearch")
-    span.icon.icon-font(data-icon-id="iconFacebook")
-    span.icon.icon-font(data-icon-id="iconArrow")
-    span.icon.icon-font(data-icon-id="iconPhone")
-    include ../components/index/index-section
-    
-    .container
-        img(src="../../images/opet.png", style="width: 100%;" alt="")
-        img(src="../../images/alperencelik2021.jpg", style="width: 100%;" alt="")   
+    main#swup.transition-fade
+        h1#title ITS AN INDEX PAGE
+        .container 
+            p.container-test pug test 2 its a test aaa
+        .container.container--sm
+            p.container-test pug test 2 its a test aaa
+        a(href="/about.html") Go to about page
+        span.icon.icon-font(data-icon-id="iconSearch")
+        span.icon.icon-font(data-icon-id="iconFacebook")
+        span.icon.icon-font(data-icon-id="iconArrow")
+        span.icon.icon-font(data-icon-id="iconPhone")
+
+        include ../components/index/index-section
+        p transition test
+        
+        .container
+            img(src="../../images/opet.png", style="width: 100%;" alt="")
+            img(src="../../images/alperencelik2021.jpg", style="width: 100%;" alt="")   
