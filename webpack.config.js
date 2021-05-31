@@ -25,7 +25,6 @@ module.exports = {
   mode: "development",
   target: "web",
   entry: "./src/js/index.js",
-  watch: "true",
   output: {
     filename: "./js/bundle[hash].js",
     path: path.resolve(__dirname, "public"),
@@ -111,10 +110,25 @@ module.exports = {
       {
         test: /.s?css$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "../",
+              esModule: false,
+            },
+          },
+          {
+            loader: "css-loader",
+            options: { sourceMap: false },
+          },
+          { loader: "postcss-loader", options: { sourceMap: false } },
+          {
+            loader: "resolve-url-loader",
+          },
+          {
+            loader: "sass-loader",
+            options: { sourceMap: true },
+          },
         ],
       },
       {
@@ -122,6 +136,13 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: "./images/[hash][ext][query]",
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[hash][ext][query]",
         },
       },
     ],

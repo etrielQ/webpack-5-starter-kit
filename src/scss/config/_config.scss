@@ -103,7 +103,16 @@ body {
   text-rendering: optimizeLegibility !important;
 }
 
-.container{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Simplon Mono";
+}
+
+.container {
   max-width: 1360px;
   width: 100%;
   margin-left: auto;
@@ -111,36 +120,37 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 
-  &--sm{
-   max-width: 1280px; 
+  &--sm {
+    max-width: 1280px;
   }
 
-  &,&--sm{
-    @include bp(laptop-l){
+  &,
+  &--sm {
+    @include bp(laptop-l) {
       max-width: 1150px;
     }
-    @include bp(desktop){
+    @include bp(desktop) {
       max-width: 960px;
     }
-    @include bp(tablet){
+    @include bp(tablet) {
       max-width: 720px;
     }
-    @include bp(tablet-small){
+    @include bp(tablet-small) {
       max-width: 520px;
     }
-    @include bp(mobile){
+    @include bp(mobile) {
       max-width: 100%;
       padding-left: 20px;
       padding-right: 20px;
     }
-    @include bp(mobile-x-small){
+    @include bp(mobile-x-small) {
       padding-left: 15px;
       padding-right: 15px;
     }
   }
 }
 
-.container-test{
+.container-test {
   background: beige;
 }
 
