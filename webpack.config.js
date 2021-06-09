@@ -32,10 +32,9 @@ module.exports = {
   },
   devtool: "source-map",
   devServer: {
-    contentBase: path.join(__dirname, "./public"),
-    watchContentBase: true,
+    liveReload: true,
     port: 3000,
-    hot: true,
+    hot: false,
     open: true,
   },
   optimization: {
