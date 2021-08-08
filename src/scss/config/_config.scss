@@ -75,16 +75,6 @@ a {
 }
 
 html {
-  font-size: 16px;
-  @include bp(laptop-s) {
-    font-size: 14px;
-  }
-  @include bp(tablet-small-under) {
-    font-size: 16px;
-  }
-}
-
-html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
 }
@@ -93,23 +83,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-body {
-  font-family: $font-family-base;
-  font-size: 1.6rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Simplon Mono";
 }
 
 .container {
@@ -147,20 +120,5 @@ h6 {
       padding-left: 15px;
       padding-right: 15px;
     }
-  }
-}
-
-.container-test {
-  background: beige;
-}
-
-.section {
-  padding: 150px 0;
-
-  @include bp(tablet) {
-    padding: 100px 0;
-  }
-  @include bp(tablet-small) {
-    padding: 50px 0;
   }
 }

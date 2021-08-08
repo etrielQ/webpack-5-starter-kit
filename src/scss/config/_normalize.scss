@@ -116,7 +116,11 @@ h6 {
   margin-top: 0;
   font-size: inherit;
   font-weight: inherit;
-  margin-bottom: 0rem;
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
 }
 
 // stylelint-enable selector-list-comma-newline-after

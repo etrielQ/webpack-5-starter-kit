@@ -1,6 +1,5 @@
 extends ../layout/layoutMain
 block append vars
-    - var header = true;
 
 block append head
     title Starter Kit - Webpack 5
@@ -9,9 +8,8 @@ block content
     main#swup.transition-fade
         h1#title ITS AN INDEX PAGE
         .container 
-            p.container-test pug test 2 its a test aaa
+            p aaa
         .container.container--sm
-            p.container-test pug test 2 its a test aaa
         a(href="/about.html") Go to about page
         span.icon.icon-font(data-icon-id="iconSearch")
         span.icon.icon-font(data-icon-id="iconFacebook")
@@ -19,8 +17,6 @@ block content
         span.icon.icon-font(data-icon-id="iconPhone")
 
         include ../components/index/index-section
-        p transition test
         
         .container
-            img(src="../../images/opet.png", style="width: 100%;" alt="")
-            img(src="../../images/alperencelik2021.jpg", style="width: 100%;" alt="")   
+            img(src="../../images/webpack-logo.png", alt="")

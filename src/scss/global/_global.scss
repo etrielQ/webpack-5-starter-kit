@@ -1,26 +1,27 @@
-.h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 40px;
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
 }
-$colorY: gray;
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
 
 body {
-  color: $colorY;
-  background-color: #e9e9e9;
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
 }
 
-a {
-  color: red;
-  text-decoration: none;
-  font-size: 18px;
-  display: flex;
-  transition: $transition;
-  &:hover {
-    color: yellow;
+.section {
+  padding: 150px 0;
+
+  @include bp(tablet) {
+    padding: 100px 0;
+  }
+  @include bp(tablet-small) {
+    padding: 50px 0;
   }
 }
 
@@ -31,13 +32,4 @@ a {
     display: flex;
     align-items: center;
   }
-}
-
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
 }
