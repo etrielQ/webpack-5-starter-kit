@@ -34,7 +34,7 @@ module.exports = {
     liveReload: true,
     port: 8080,
     hot: false,
-    open: true,
+    open: false,
   },
   optimization: {
     minimize: true,
