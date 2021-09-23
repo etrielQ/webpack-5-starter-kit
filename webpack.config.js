@@ -2,7 +2,6 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const fs = require("fs");
 
 function generateHtmlPlugins(templateDir) {
@@ -26,7 +25,7 @@ module.exports = {
   target: "web",
   entry: "./src/js/index.js",
   output: {
-    filename: "./js/bundle[hash].js",
+    filename: "./js/bundle.js",
     path: path.resolve(__dirname, "public"),
     clean: true,
   },
@@ -67,25 +66,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
       ignoreOrder: true,
-    }),
-    new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: [
-          ["gifsicle", { interlaced: true }],
-          ["jpegtran", { progressive: true }],
-          ["optipng", { optimizationLevel: 5 }],
-          [
-            "svgo",
-            {
-              plugins: [
-                {
-                  removeViewBox: false,
-                },
-              ],
-            },
-          ],
-        ],
-      },
     }),
     new HTMLWebpackPlugin({
       filename: "./icons/icons-sprite.html",
@@ -134,7 +114,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: "./images/[hash][ext][query]",
+          filename: "./images/[name][ext][query]",
         },
       },
       {
@@ -146,9 +126,5 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    alias: {
-      images: path.resolve(__dirname, "src/images"),
-    },
-  },
+  resolve: {},
 };
