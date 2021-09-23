@@ -32,7 +32,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     liveReload: true,
-    port: 3000,
+    port: 8080,
     hot: false,
     open: true,
   },
