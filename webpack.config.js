@@ -27,7 +27,7 @@ module.exports = {
   output: {
     filename: "./js/bundle.js",
     path: path.resolve(__dirname, "public"),
-    clean: true,
+    clean: false,
   },
   devtool: "source-map",
   devServer: {
