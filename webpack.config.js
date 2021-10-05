@@ -2,6 +2,7 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const fs = require("fs");
 
 function generateHtmlPlugins(templateDir) {
@@ -71,6 +72,9 @@ module.exports = {
       filename: "./icons/icons-sprite.html",
       template: "./src/icons/icons-sprite.pug",
       inject: "body",
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "src/json", to: "json" }],
     }),
   ].concat(htmlPlugins),
   module: {

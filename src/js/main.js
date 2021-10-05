@@ -1,7 +1,9 @@
 import icons from "../icons/icons";
-import Swup from "swup";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
+import { loadAnimation } from "lottie-web";
+import { defineLordIconElement } from "lord-icon-element";
+defineLordIconElement(loadAnimation);
 
 var app = {
   iconSpriteFn() {
@@ -61,15 +63,6 @@ function docResized(fn) {
   window.addEventListener("resize", fn);
 }
 docReadied(() => {
-  const swup = new Swup({
-    cache: true,
-  });
-  swup.on("contentReplaced", function () {
-    swup.options.containers.forEach(() => {
-      app.iconSpriteFn();
-      app.swiperTest();
-    });
-  });
   app.init();
 });
 
