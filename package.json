@@ -44,6 +44,8 @@
     "webpack-dev-server": "^4.2.1"
   },
   "dependencies": {
+    "alpinejs": "^3.7.1",
+    "axios": "^0.24.0",
     "jquery": "^3.6.0"
   }
 }

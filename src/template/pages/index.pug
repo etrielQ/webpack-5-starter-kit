@@ -17,6 +17,35 @@ block content
         span.icon.icon-font(data-icon-id="iconPhone")
 
         include ../components/index/index-section
+        .container 
+            p
+                strong alpine test 
+            div(x-data="{ open: false }")
+                button(@click="open = !open;") show item
+                template(x-if="open") 
+                    div showed item
+            div(x-data="{colors: ['Red', 'Orange', 'Yellow'] }" style="margin-top: 20px;")
+                template(x-for="color in colors")
+                    span(style="display:block;" x-text="color")
+
+            div(x-data="dropdown" style="margin-top: 20px;")
+                button(@click="toggle") show dropdown
+                div(x-show="showDropdown") show dropdown
+
+
+            div(x-data="getApi" style="margin-top: 20px;")
+                template(x-for="apies in apiesList")
+                    div
+                        span(x-text="apies.id")
+                        br
+                        span(x-text="apies.title")
+                        br
+                        span(x-text="apies.body")
+                        br
+                        br
+                        hr
+                        br
+
         
         .container
             img(src="../../images/webpack-logo.png", alt="")
