@@ -1,24 +1,24 @@
-const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const fs = require("fs");
+const path = require("path")
+const HTMLWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const fs = require("fs")
 
 function generateHtmlPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
   return templateFiles.map((item) => {
-    const parts = item.split(".");
-    const name = parts[0];
-    const extension = parts[1];
+    const parts = item.split(".")
+    const name = parts[0]
+    const extension = parts[1]
     return new HTMLWebpackPlugin({
       filename: `${name}.html`,
       inject: "body",
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-    });
-  });
+    })
+  })
 }
 
-const htmlPlugins = generateHtmlPlugins("./src/template/pages");
+const htmlPlugins = generateHtmlPlugins("./src/template/pages")
 
 module.exports = {
   mode: "development",
@@ -106,10 +106,6 @@ module.exports = {
           {
             loader: "resolve-url-loader",
           },
-          {
-            loader: "sass-loader",
-            options: { sourceMap: true },
-          },
         ],
       },
       {
@@ -129,4 +125,4 @@ module.exports = {
     ],
   },
   resolve: {},
-};
+}

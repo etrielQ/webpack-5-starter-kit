@@ -1,17 +1,17 @@
-import css from "../scss/style.scss";
+import css from "../scss/style.css"
 // const $ = require("jquery"); // if we need
-import * as main from "./main";
+import * as main from "./main"
 
 function docReady(fn) {
   if (
     document.readyState === "complete" ||
     document.readyState === "interactive"
   ) {
-    setTimeout(fn, 1);
+    setTimeout(fn, 1)
   } else {
-    document.addEventListener("DOMContentLoaded", fn);
+    document.addEventListener("DOMContentLoaded", fn)
   }
 }
 docReady(() => {
-  main;
-});
+  main
+})

@@ -1,0 +1,18 @@
+/* @import "./config/_fonts";
+@import "./config-index";
+
+@import "./components/_buttons";
+
+@import "./common/_header";
+@import "./common/_footer";
+
+@import "./pages/index/_index";
+@import "./pages/about/_about"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-4 py-2 rounded-full font-semibold bg-gray-200 text-black;
+}
