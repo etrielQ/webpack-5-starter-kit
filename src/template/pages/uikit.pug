@@ -1,0 +1,368 @@
+extends ../layout/layoutMain
+block append vars
+
+block append head
+    title Uikit
+
+block content
+    main 
+      section.uikit
+        .container
+          .uikit__side.custom-scrollbar
+            .uikit__side-title Uikit Sidebar
+          .uikit__content 
+            .uikit__item#bootstrap-grid
+              .uikit__item__wrapper
+                .uikit__title Bootstrap Column Grid
+                .uikit__grid.uikit__grid--row
+                  .row 
+                    .col-3 
+                      p asdasd 
+                    .col-3 
+                      p asdasd 
+                    .col-3 
+                      p asdasd 
+                    .col-3 
+                      p asdasd 
+                    .col-3 
+                      p asdasd 
+            .uikit__item#preloader
+              .uikit__item__wrapper
+                .uikit__title preloader
+                .uikit__grid.uikit__grid--row
+                  .loader
+                    svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'  viewbox='0 0 100 100' preserveaspectratio='xMidYMid')
+                      g(transform='rotate(0 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-1.0101010101010102s' repeatcount='indefinite')
+                      g(transform='rotate(40 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-0.8838383838383839s' repeatcount='indefinite')
+                      g(transform='rotate(80 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-0.7575757575757576s' repeatcount='indefinite')
+                      g(transform='rotate(120 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-0.6313131313131313s' repeatcount='indefinite')
+                      g(transform='rotate(160 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-0.5050505050505051s' repeatcount='indefinite')
+                      g(transform='rotate(200 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-0.3787878787878788s' repeatcount='indefinite')
+                      g(transform='rotate(240 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-0.25252525252525254s' repeatcount='indefinite')
+                      g(transform='rotate(280 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='-0.12626262626262627s' repeatcount='indefinite')
+                      g(transform='rotate(320 50 50)')
+                        rect(x='47.5' y='23.5' rx='2.25' ry='2.25' width='5' height='15' )
+                        animate(attributename='opacity' values='1;0' keytimes='0;1' dur='1.1363636363636365s' begin='0s' repeatcount='indefinite')
+                .loader 
+                  svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 100 100' preserveaspectratio='xMidYMid')
+                    path(d='M33 50A17 17 0 0 0 67 50A17 18.8 0 0 1 33 50' )
+                      animatetransform(attributename='transform' type='rotate' dur='0.819672131147541s' repeatcount='indefinite' keytimes='0;1' values='0 50 50.9;360 50 50.9')
+                .loader
+                  #floatingBarsG
+                    #rotateG_01.blockG
+                    #rotateG_02.blockG
+                    #rotateG_03.blockG
+                    #rotateG_04.blockG
+                    #rotateG_05.blockG
+                    #rotateG_06.blockG
+                    #rotateG_07.blockG
+                    #rotateG_08.blockG
+
+
+            .uikit__item#font
+              .uikit__item__wrapper 
+                .uikit__title Font Sizes & Weights
+                .uikit__grid   
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 200
+                    .txt.txt--px16.txt--font200 .txt.txt--px16.txt--font200 
+                    .txt.txt--px18.txt--font200 .txt.txt--px18.txt--font200 
+                    .txt.txt--px20.txt--font200 .txt.txt--px20.txt--font200 
+                    .txt.txt--px22.txt--font200 .txt.txt--px22.txt--font200 
+                    .txt.txt--px24.txt--font200 .txt.txt--px24.txt--font200 
+                    .txt.txt--px26.txt--font200 .txt.txt--px26.txt--font200 
+                    .txt.txt--px28.txt--font200 .txt.txt--px28.txt--font200 
+                    .txt.txt--px30.txt--font200 .txt.txt--px30.txt--font200 
+                    .txt.txt--px42.txt--font200 .txt.txt--px42.txt--font200 
+                    .txt.txt--px48.txt--font200 .txt.txt--px48.txt--font200 
+                    .txt.txt--px60.txt--font200 .txt.txt--px60.txt--font200 
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 300
+                    .txt.txt--px16.txt--font300 .txt.txt--px16.txt--font300 
+                    .txt.txt--px18.txt--font300 .txt.txt--px18.txt--font300 
+                    .txt.txt--px20.txt--font300 .txt.txt--px20.txt--font300 
+                    .txt.txt--px22.txt--font300 .txt.txt--px22.txt--font300 
+                    .txt.txt--px24.txt--font300 .txt.txt--px24.txt--font300 
+                    .txt.txt--px26.txt--font300 .txt.txt--px26.txt--font300 
+                    .txt.txt--px28.txt--font300 .txt.txt--px28.txt--font300 
+                    .txt.txt--px30.txt--font300 .txt.txt--px30.txt--font300 
+                    .txt.txt--px42.txt--font300 .txt.txt--px42.txt--font300 
+                    .txt.txt--px48.txt--font300 .txt.txt--px48.txt--font300 
+                    .txt.txt--px60.txt--font300 .txt.txt--px60.txt--font300 
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 400
+                    .txt.txt--px16.txt--font400 .txt.txt--px16.txt--font400 
+                    .txt.txt--px18.txt--font400 .txt.txt--px18.txt--font400 
+                    .txt.txt--px20.txt--font400 .txt.txt--px20.txt--font400 
+                    .txt.txt--px22.txt--font400 .txt.txt--px22.txt--font400 
+                    .txt.txt--px24.txt--font400 .txt.txt--px24.txt--font400 
+                    .txt.txt--px26.txt--font400 .txt.txt--px26.txt--font400 
+                    .txt.txt--px28.txt--font400 .txt.txt--px28.txt--font400 
+                    .txt.txt--px30.txt--font400 .txt.txt--px30.txt--font400 
+                    .txt.txt--px42.txt--font400 .txt.txt--px42.txt--font400 
+                    .txt.txt--px48.txt--font400 .txt.txt--px48.txt--font400 
+                    .txt.txt--px60.txt--font400 .txt.txt--px60.txt--font400 
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 500
+                    .txt.txt--px16.txt--font500 .txt.txt--px16.txt--font500 
+                    .txt.txt--px18.txt--font500 .txt.txt--px18.txt--font500 
+                    .txt.txt--px20.txt--font500 .txt.txt--px20.txt--font500 
+                    .txt.txt--px22.txt--font500 .txt.txt--px22.txt--font500 
+                    .txt.txt--px24.txt--font500 .txt.txt--px24.txt--font500 
+                    .txt.txt--px26.txt--font500 .txt.txt--px26.txt--font500 
+                    .txt.txt--px28.txt--font500 .txt.txt--px28.txt--font500 
+                    .txt.txt--px30.txt--font500 .txt.txt--px30.txt--font500 
+                    .txt.txt--px42.txt--font500 .txt.txt--px42.txt--font500 
+                    .txt.txt--px48.txt--font500 .txt.txt--px48.txt--font500 
+                    .txt.txt--px60.txt--font500 .txt.txt--px60.txt--font500 
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 600
+                    .txt.txt--px16.txt--font600 .txt.txt--px16.txt--font600 
+                    .txt.txt--px18.txt--font600 .txt.txt--px18.txt--font600 
+                    .txt.txt--px20.txt--font600 .txt.txt--px20.txt--font600 
+                    .txt.txt--px22.txt--font600 .txt.txt--px22.txt--font600 
+                    .txt.txt--px24.txt--font600 .txt.txt--px24.txt--font600 
+                    .txt.txt--px26.txt--font600 .txt.txt--px26.txt--font600 
+                    .txt.txt--px28.txt--font600 .txt.txt--px28.txt--font600 
+                    .txt.txt--px30.txt--font600 .txt.txt--px30.txt--font600 
+                    .txt.txt--px42.txt--font600 .txt.txt--px42.txt--font600 
+                    .txt.txt--px48.txt--font600 .txt.txt--px48.txt--font600 
+                    .txt.txt--px60.txt--font600 .txt.txt--px60.txt--font600 
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 700
+                    .txt.txt--px16.txt--font700 .txt.txt--px16.txt--font700 
+                    .txt.txt--px18.txt--font700 .txt.txt--px18.txt--font700 
+                    .txt.txt--px20.txt--font700 .txt.txt--px20.txt--font700 
+                    .txt.txt--px22.txt--font700 .txt.txt--px22.txt--font700 
+                    .txt.txt--px24.txt--font700 .txt.txt--px24.txt--font700 
+                    .txt.txt--px26.txt--font700 .txt.txt--px26.txt--font700 
+                    .txt.txt--px28.txt--font700 .txt.txt--px28.txt--font700 
+                    .txt.txt--px30.txt--font700 .txt.txt--px30.txt--font700 
+                    .txt.txt--px42.txt--font700 .txt.txt--px42.txt--font700 
+                    .txt.txt--px48.txt--font700 .txt.txt--px48.txt--font700 
+                    .txt.txt--px60.txt--font700 .txt.txt--px60.txt--font700 
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 800
+                    .txt.txt--px16.txt--font800 .txt.txt--px16.txt--font800 
+                    .txt.txt--px18.txt--font800 .txt.txt--px18.txt--font800 
+                    .txt.txt--px20.txt--font800 .txt.txt--px20.txt--font800 
+                    .txt.txt--px22.txt--font800 .txt.txt--px22.txt--font800 
+                    .txt.txt--px24.txt--font800 .txt.txt--px24.txt--font800 
+                    .txt.txt--px26.txt--font800 .txt.txt--px26.txt--font800 
+                    .txt.txt--px28.txt--font800 .txt.txt--px28.txt--font800 
+                    .txt.txt--px30.txt--font800 .txt.txt--px30.txt--font800 
+                    .txt.txt--px42.txt--font800 .txt.txt--px42.txt--font800 
+                    .txt.txt--px48.txt--font800 .txt.txt--px48.txt--font800 
+                    .txt.txt--px60.txt--font800 .txt.txt--px60.txt--font800 
+                  .uikit__grid-item 
+                    .uikit__grid-title Font Weight 900
+                    .txt.txt--px16.txt--font900 .txt.txt--px16.txt--font900 
+                    .txt.txt--px18.txt--font900 .txt.txt--px18.txt--font900 
+                    .txt.txt--px20.txt--font900 .txt.txt--px20.txt--font900 
+                    .txt.txt--px22.txt--font900 .txt.txt--px22.txt--font900 
+                    .txt.txt--px24.txt--font900 .txt.txt--px24.txt--font900 
+                    .txt.txt--px26.txt--font900 .txt.txt--px26.txt--font900 
+                    .txt.txt--px28.txt--font900 .txt.txt--px28.txt--font900 
+                    .txt.txt--px30.txt--font900 .txt.txt--px30.txt--font900 
+                    .txt.txt--px42.txt--font900 .txt.txt--px42.txt--font900 
+                    .txt.txt--px48.txt--font900 .txt.txt--px48.txt--font900 
+                    .txt.txt--px60.txt--font900 .txt.txt--px60.txt--font900 
+            .uikit__item#color 
+              .uikit__item__wrapper
+                .uikit__title Colors
+                .uikit__grid.uikit__grid--four
+                  .uikit__grid-item 
+                    .uikit-color.bg-white
+                      span White
+                  .uikit__grid-item 
+                    .uikit-color.bg-primary
+                      span Primary
+                  .uikit__grid-item 
+                    .uikit-color.bg-secondary
+                      span Secondary
+                  .uikit__grid-item 
+                    .uikit-color.bg-paragraph
+                      span Paragraph
+                  .uikit__grid-item 
+                    .uikit-color.bg-paragraph-alt
+                      span Paragraph alt
+                  .uikit__grid-item 
+                    .uikit-color.bg-light
+                      span Bg light
+                  .uikit__grid-item 
+                    .uikit-color.bg-light-alt
+                      span Bg light alt
+            .uikit__item#button
+              .uikit__item__wrapper
+                .uikit__title Buttons 
+                .uikit__grid
+                  .uikit__grid-item
+                    .uikit__grid-title btn--bg-transparent
+                    .btn.btn--bg-transparent button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--bg-white
+                    .btn.btn--bg.btn--bg-white button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--bg-secondary
+                    .btn.btn--bg.btn--bg-secondary button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--bg-bordered
+                    .btn.btn--bg.btn--bg-bordered button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--bg-shadow
+                    .btn.btn--bg.btn--bg-shadow button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--only-icon
+                    .btn.btn--bg.btn--only-icon 
+                      .btn-icon
+                        span.icon.icon-font(data-icon-id="iconAngle")
+                  .uikit__grid-item
+                    .uikit__grid-title btn--vertical
+                    .btn.btn--vertical button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--text-white
+                    .btn.btn--text-white
+                      .btn-txt button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--text-paragraph
+                    .btn.btn--text-paragraph
+                      .btn-txt button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--text-paragraph-alt
+                    .btn.btn--text-paragraph-alt
+                      .btn-txt button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--text-secondary
+                    .btn.btn--text-secondary
+                      .btn-txt button
+                  .uikit__grid-item
+                    .uikit__grid-title btn--icon-white
+                    .btn.btn--bg.btn--icon-white
+                      .btn-icon
+                        span.icon.icon-font(data-icon-id="iconAngle")
+                  .uikit__grid-item
+                    .uikit__grid-title btn--icon-secondary
+                    .btn.btn--bg.btn--icon-secondary
+                      .btn-icon
+                        span.icon.icon-font(data-icon-id="iconAngle")
+                  .uikit__grid-item
+                    .uikit__grid-title btn--icon-paragraph-alt
+                    .btn.btn--bg.btn--icon-paragraph-alt
+                      .btn-icon
+                        span.icon.icon-font(data-icon-id="iconAngle")
+                  .uikit__grid-item 
+                    a(href="#0").btn--hover-arrow.btn.btn--bg-transparent.btn--text-paragraph-alt.btn--icon-secondary.btn--icon-right
+                      .btn-txt Buton example
+                      .btn-icon
+                        span.icon.icon-font(data-icon-id="iconLongArrow")
+                  .uikit__grid-item 
+                    a(href="#0").btn.btn--hover-secondary.btn--bg.btn--bg-bordered.btn--icon-right.btn--text-paragraph-alt.btn--icon-secondary
+                      .btn-txt Buton example 2
+                      .btn-icon 
+                        span.icon.icon-font(data-icon-id="iconLongArrow")
+            .uikit__item#select
+              .uikit__item__wrapper
+                .uikit__title Select
+                .uikit__grid.main-grid--fr3
+                  .uikit__grid-item
+                    .js-select.select.select--default
+                      select(data-placeholder="select default")
+                        option(value="")
+                        option(value="Select Item 1") Select Item 1
+                        option(value="Select Item 2") Select Item 2
+                        option(value="Select Item 3") Select Item 3
+                        option(value="Select Item 4") Select Item 4
+                        option(value="Select Item 5") Select Item 5
+                        option(value="Select Item 5") Select Item 6
+                  .uikit__grid-item
+                    .js-select.select.select--default.select--onchange
+                      select(data-placeholder="select on change")
+                        option(value="")
+                        option(value="Select Item 1") Select Item 1
+                        option(value="Select Item 2") Select Item 2
+                        option(value="Select Item 3") Select Item 3
+                        option(value="Select Item 4") Select Item 4
+                        option(value="Select Item 5") Select Item 5
+                        option(value="Select Item 5") Select Item 6
+                  .uikit__grid-item
+                    .js-select.select.select--transparent
+                      span.select__icon.icon.icon-font(data-icon-id="iconFilter")
+                      select(data-placeholder="select transparent")
+                        option(value="")
+                        option(value="Select Item 1") Select Item 1
+                        option(value="Select Item 2") Select Item 2
+                        option(value="Select Item 3") Select Item 3
+                        option(value="Select Item 4") Select Item 4
+                        option(value="Select Item 5") Select Item 5
+                        option(value="Select Item 5") Select Item 6
+                  .uikit__grid-item
+                    .js-select.select.select--transparent.select--without-dropdown
+                      span.select__icon.icon.icon-font(data-icon-id="iconFilter")
+                      select(data-placeholder="select without dropdown")
+                        option(value="")
+                        option(value="Select Item 1") Select Item 1
+                        option(value="Select Item 2") Select Item 2
+                        option(value="Select Item 3") Select Item 3
+                        option(value="Select Item 4") Select Item 4
+                        option(value="Select Item 5") Select Item 5
+                        option(value="Select Item 5") Select Item 6
+
+            .uikit__item#input
+              .uikit__item__wrapper
+                .uikit__title Inputs
+                .uikit__grid.uikit__grid--row
+                  .uikit__grid-item
+                    .input-column 
+                      .input-item
+                        input(type="text")
+                        span.input-item__placeholder
+                          | Name Surname 
+                          strong *
+                      .input-item
+                        input(type="text")
+                        span.input-item__placeholder
+                          | Phone Number 
+                          strong *
+                    .input-column 
+                        .input-item
+                          input(type="email")
+                          span.input-item__placeholder
+                            | Email Address 
+                            strong *
+                        .input-item
+                          input(type="text")
+                          span.input-item__placeholder
+                            | Subject
+                            strong *
+                    .input-item.input-item--textarea
+                        textarea(name="", cols="30", rows="10")
+                        span.input-item__placeholder
+                            | Your Message
+                            strong *
+                    .input-item--checkbox
+                      label.checkbox
+                        input(type='checkbox')
+                        span.checkbox__checkmark
+                        .checkbox__txt.txt.txt--px18.txt--font400.c-paragraph-alt Checkbox example
+                    br
+                    .input-item--checkbox.bg-paragraph
+                      label.checkbox.checkbox--white
+                        input(type='checkbox')
+                        span.checkbox__checkmark
+                        .checkbox__txt.txt.txt--px18.txt--font400.c-paragraph-alt Checkbox example white
