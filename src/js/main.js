@@ -3,7 +3,7 @@ import icons from "../icons/icons"
 import Swiper from "swiper"
 import "swiper/swiper-bundle.css"
 import babelUikit from "babel-uikit/index"
-import "babel-uikit/_uikit.scss"
+import "babel-uikit/_style.scss"
 
 var app = {
   iconSpriteFn() {

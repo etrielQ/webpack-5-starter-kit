@@ -44,7 +44,7 @@
     "webpack-dev-server": "^4.2.1"
   },
   "dependencies": {
-    "babel-uikit": "^1.0.81",
+    "babel-uikit": "^1.0.86",
     "jquery": "^3.6.0"
   }
 }
