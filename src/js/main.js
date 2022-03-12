@@ -36,6 +36,24 @@ var app = {
       }
     }
   },
+  inputFn() {
+    const inputItem = document.querySelectorAll(
+      ".input-item input, .input-item textarea"
+    )
+    inputItem.forEach((e) => {
+      e.addEventListener("focusin", () => {
+        e.parentNode.classList.add("input-item--focused")
+      })
+      e.addEventListener("focusout", () => {
+        if (e.value == "") {
+          e.parentNode.classList.remove("input-item--focused")
+        } else {
+          e.parentNode.classList.add("input-item--focused")
+        }
+      })
+    })
+  },
+
   load() {
     console.log("load")
   },
@@ -53,6 +71,7 @@ var app = {
     app.iconSpriteFn()
     app.load()
     app.swiperTest()
+    app.inputFn()
   },
 }
 

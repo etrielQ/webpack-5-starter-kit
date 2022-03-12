@@ -13,14 +13,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility !important;
 }
-
-.section {
-  padding: 150px 0;
-
-  @include bp(tablet) {
-    padding: 100px 0;
-  }
-  @include bp(tablet-small) {
-    padding: 50px 0;
-  }
-}

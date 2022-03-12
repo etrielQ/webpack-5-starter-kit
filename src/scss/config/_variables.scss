@@ -7,5 +7,12 @@ $font-family-base: "Lausanne";
 $transition: 0.3s cubic-bezier(0.29, 0.13, 0.27, 0.74);
 $transition-fast: 0.2s cubic-bezier(0.29, 0.13, 0.27, 0.74);
 
+:root {
+  --transition: 0.3s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+  --transition-extra-slowly: 0.8s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+  --transition-slowly: 0.4s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+  --transition-fast: 0.2s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+}
+
 /* Colors */
 $c-black: #000000;
