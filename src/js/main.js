@@ -2,7 +2,10 @@ import icons from "../icons/icons"
 // import Swup from "swup";
 import Swiper from "swiper"
 import "swiper/swiper-bundle.css"
-import babelUikit from "babel-uikit/index"
+import babelUikit, { inputFn, uikit } from "babel-uikit/index"
+uikit()
+inputFn()
+
 import "babel-uikit/_style.scss"
 
 var app = {
@@ -36,23 +39,23 @@ var app = {
       }
     }
   },
-  inputFn() {
-    const inputItem = document.querySelectorAll(
-      ".input-item input, .input-item textarea"
-    )
-    inputItem.forEach((e) => {
-      e.addEventListener("focusin", () => {
-        e.parentNode.classList.add("input-item--focused")
-      })
-      e.addEventListener("focusout", () => {
-        if (e.value == "") {
-          e.parentNode.classList.remove("input-item--focused")
-        } else {
-          e.parentNode.classList.add("input-item--focused")
-        }
-      })
-    })
-  },
+  // inputFn() {
+  //   const inputItem = document.querySelectorAll(
+  //     ".input-item input, .input-item textarea"
+  //   )
+  //   inputItem.forEach((e) => {
+  //     e.addEventListener("focusin", () => {
+  //       e.parentNode.classList.add("input-item--focused")
+  //     })
+  //     e.addEventListener("focusout", () => {
+  //       if (e.value == "") {
+  //         e.parentNode.classList.remove("input-item--focused")
+  //       } else {
+  //         e.parentNode.classList.add("input-item--focused")
+  //       }
+  //     })
+  //   })
+  // },
 
   load() {
     console.log("load")
@@ -71,7 +74,7 @@ var app = {
     app.iconSpriteFn()
     app.load()
     app.swiperTest()
-    app.inputFn()
+    // app.inputFn()
   },
 }
 
