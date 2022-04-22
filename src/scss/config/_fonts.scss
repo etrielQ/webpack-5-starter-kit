@@ -1,12 +1,15 @@
-@font-face {
-  font-family: "Lausanne";
-  src: url("../../fonts/Lausanne-Regular.eot");
-  src: url("../../fonts/Lausanne-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../fonts/Lausanne-Regular.woff2") format("woff2"),
-    url("../../fonts/Lausanne-Regular.woff") format("woff"),
-    url("../../fonts/Lausanne-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+// alternative
+
+// @font-face {
+//   font-family: "Lausanne";
+//   src: url("../../fonts/Lausanne-Regular.eot");
+//   src: url("../../fonts/Lausanne-Regular.eot?#iefix")
+//       format("embedded-opentype"),
+//     url("../../fonts/Lausanne-Regular.woff2") format("woff2"),
+//     url("../../fonts/Lausanne-Regular.woff") format("woff"),
+//     url("../../fonts/Lausanne-Regular.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }

@@ -1,3 +1,13 @@
+// import Prism from "prismjs"
+// import "prismjs/components/prism-markup"
+// import "prismjs/components/prism-pug"
+// import "prismjs/components/prism-css"
+
+// import "prismjs/themes/prism-okaidia.css"
+import hljs from "highlight.js"
+// import pug from "highlight.js/lib/languages/pug"
+// import "highlight.js"
+hljs.highlightAll()
 import icons from "../icons/icons"
 import Swup from "swup"
 

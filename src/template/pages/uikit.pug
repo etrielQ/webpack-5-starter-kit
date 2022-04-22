@@ -1,24 +1,128 @@
 extends ../layout/layoutMain
 block append vars
-  //- - var header = true 
-  - var pageName = "Index"
+  - var header = false 
+  - var footer = false
+  - var pageName = "Uikit"
 
 block append head
   title= pageName + " Webpack 5 Starter Kit"
+block append styles 
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/default.min.css")
 
 block content
   main#swup.transition-fade
-    h1#title ITS AN INDEX PAGE
-    .container 
-      p aaa
-    .container.container--sm
-    a(href="/about.html") Go to about page
-    span.icon.icon-font(data-icon-id="iconSearch")
-    span.icon.icon-font(data-icon-id="iconFacebook")
-    span.icon.icon-font(data-icon-id="iconArrow")
-    span.icon.icon-font(data-icon-id="iconPhone")
+    section.uikit
+      .uikit__side
+        .uikit__side-logo 
+          img(src="../../images/base/babel-logo-primary.svg", alt="") 
+        .uikit__side-search 
+          input(type="text", placeholder="Search...")
+          .uikit__side-version Babel Uikit v1.1
 
-    include ../components/index/index-section
-    
-    .container
-      img(src="../../images/webpack-logo.png", alt="")
+        .uikit__side-wrapper 
+          .uikit__side-field 
+            .uikit__side-title.txt.txt--px18.txt--font600 GETTING STARTED
+            .uikit__side-list
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Overview
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Build
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 File Structure
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Dark Mode
+              
+          .uikit__side-field 
+            .uikit__side-title.txt.txt--px18.txt--font600 BASE
+            .uikit__side-list
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Utilies
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Spacing
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Text
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Background
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Input Type Text
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Input Type Textarea
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Input Type Radio
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Input Type Checkbox
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Select
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Select with Select2 
+
+          .uikit__side-field 
+            .uikit__side-title.txt.txt--px18.txt--font600 COMPONENTS
+            .uikit__side-list
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Accordion
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Filter Tab
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Alert
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Swiper
+              .uikit__side-item
+                .txt.txt--px15.txt--font500 Tooltip
+              
+      .uikit__content 
+        .container 
+          .uikit__header 
+            .uikit__header-title.txt.txt--px24.txt--font600 Overview
+            .uikit__header-right 
+              .uikit__header-btn 
+                | Images
+              .uikit__header-btn 
+                | Icons
+              .uikit__header-btn.uikit__header-btn--dark
+                | Website
+          .uikit__wrapper
+            .uikit__item#overview
+              .uikit-overview 
+                .uikit-overview__title Hello,
+                  span Visitor 
+                .uikit-overview__info This page is a Uikit page that we use to develop the frontend.
+                .uikit-overview__txt If you encounter a problem during development, please ignore it until the final version is released.
+                .uikit-overview__copyright 
+                  p Being Developed by 
+                    a(href="https://www.babel.com.tr" target="_blank") Babel
+                  strong all rights reserved.
+            .uikit__item#build
+              p Aşağıdaki github reposundan projeyi klonlayarak indirme işlemini yapabilirsiniz.
+              pre
+                code(class="language-html")
+                  | https://github.com/etrielQ/webpack-5-starter-kit.git
+              p Sırasıyla Adımları Takip edin.
+              pre
+                code(class="language-html")
+                  | npm install
+              p Eğer hata alırsanız;
+              pre
+                code(class="language-html")
+                  | npm install --legacy-peer-deps
+              p
+                strong Kurulum Tamam. 
+                |Aşağıdaki komutu çalıştırarak projeyi çalıştırabilirsiniz.
+              pre
+                code(class="language-html")
+                  | npm run serve
+              p Son olarak Build çıktısı almak için aşağıdaki komutu uygulayabilirsiniz. 
+              pre
+                code.language-html
+                  | npm run build
+            .uikit__item#build
+              p Aşağıdaki github reposundan projeyi klonlayarak indirme işlemini yapabilirsiniz.
+              pre
+                code.language-html.javascript.
+                  .uikit__header-right 
+                    .uikit__header-btn 
+                      | Images
+                    .uikit__header-btn 
+                      | Icons
+                    .uikit__header-btn.uikit__header-btn--dark
+                      | Website

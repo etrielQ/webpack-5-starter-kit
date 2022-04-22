@@ -46,6 +46,8 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.26",
     "bootstrap": "^5.1.3",
-    "jquery": "^3.6.0"
+    "highlight.js": "^11.5.1",
+    "jquery": "^3.6.0",
+    "prismjs": "^1.28.0"
   }
 }
