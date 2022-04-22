@@ -1,7 +1,6 @@
 extends ../layout/layoutMain
 block append vars
-  - var header = true 
-  - var footer = true
+  //- - var header = true 
   - var pageName = "Index"
 
 block append head
@@ -11,7 +10,7 @@ block content
   main#swup.transition-fade
     h1#title ITS AN INDEX PAGE
     .container 
-      button aaa
+      p aaa
     .container.container--sm
     a(href="/about.html") Go to about page
     span.icon.icon-font(data-icon-id="iconSearch")

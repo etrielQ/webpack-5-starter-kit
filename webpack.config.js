@@ -1,24 +1,24 @@
-const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const fs = require("fs");
+const path = require("path")
+const HTMLWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const fs = require("fs")
 
 function generateHtmlPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
   return templateFiles.map((item) => {
-    const parts = item.split(".");
-    const name = parts[0];
-    const extension = parts[1];
+    const parts = item.split(".")
+    const name = parts[0]
+    const extension = parts[1]
     return new HTMLWebpackPlugin({
       filename: `${name}.html`,
       inject: "body",
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-    });
-  });
+    })
+  })
 }
 
-const htmlPlugins = generateHtmlPlugins("./src/template/pages");
+const htmlPlugins = generateHtmlPlugins("./src/template/pages")
 
 module.exports = {
   mode: "development",
@@ -79,7 +79,42 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
-        use: ["html-loader", "pug-html-loader"],
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              sources: {
+                list: [
+                  // All default supported tags and attributes
+                  "...",
+                  {
+                    tag: "img",
+                    attribute: "data-src",
+                    type: "src",
+                  },
+                  {
+                    tag: "video",
+                    attribute: "data-src",
+                    type: "src",
+                  },
+                  {
+                    tag: "source",
+                    attribute: "data-src",
+                    type: "src",
+                  },
+                  {
+                    tag: "img",
+                    attribute: "data-srcset",
+                    type: "srcset",
+                  },
+                ],
+              },
+            },
+          },
+          {
+            loader: "pug-html-loader",
+          },
+        ],
       },
       {
         test: /\.js$/,
@@ -113,7 +148,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|mp4)$/i,
         type: "asset/resource",
         generator: {
           filename: "./images/[name][ext][query]",
@@ -126,7 +161,14 @@ module.exports = {
           filename: "fonts/[hash][ext][query]",
         },
       },
+      {
+        test: require.resolve("jquery"),
+        loader: "expose-loader",
+        options: {
+          exposes: ["$", "jQuery"],
+        },
+      },
     ],
   },
   resolve: {},
-};
+}

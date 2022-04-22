@@ -1,21 +1,25 @@
 extends ../layout/layoutMain
 block append vars
+  - var header = true 
+  - var footer = true
+  - var pageName = "Index"
 
 block append head
-    title Starter Kit - Webpack 5
+  title= pageName + " Webpack 5 Starter Kit"
 
 block content
-    main#swup.transition-fade
-        h1#title ITS AN INDEX PAGE
-        p pug test 2
-        a(href="/index.html") Go to index page
-        include ../components/about/about-section
-        p transition test
-        .swiper-container
-            .swiper-wrapper 
-                .swiper-slide SLİDE 1
-                .swiper-slide SLİDE 2
-                .swiper-slide SLİDE 3
-                .swiper-slide SLİDE 4
-        
+  main#swup.transition-fade
+    h1#title ITS AN ABOUT PAGE
+    .container 
+      p aaa
+    .container.container--sm
+    a(href="/about.html") Go to about page
+    span.icon.icon-font(data-icon-id="iconSearch")
+    span.icon.icon-font(data-icon-id="iconFacebook")
+    span.icon.icon-font(data-icon-id="iconArrow")
+    span.icon.icon-font(data-icon-id="iconPhone")
+
+    include ../components/index/index-section
     
+    .container
+      img(src="../../images/webpack-logo.png", alt="")
