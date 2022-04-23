@@ -38,7 +38,6 @@ html {
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
-    scroll-behavior: smooth;
   }
 }
 
@@ -166,6 +165,10 @@ dl {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
 }
 
 ol ol,

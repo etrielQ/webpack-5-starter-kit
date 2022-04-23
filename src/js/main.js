@@ -1,11 +1,8 @@
-import Prism from "prismjs"
-import "prismjs/components/prism-markup"
-import "prismjs/components/prism-pug"
-import "prismjs/components/prism-css"
-
-import "prismjs/themes/prism-okaidia.css"
+import uikit from "./uikit.js"
 import icons from "../icons/icons"
 import Swup from "swup"
+
+uikit()
 
 var app = {
   iconSpriteFn() {

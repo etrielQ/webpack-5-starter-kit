@@ -101,13 +101,22 @@ $ui-primary: #00a6ce;
     &-title {
       color: var(--ui-text);
       padding: 10px 0;
+      text-transform: uppercase;
     }
     &-item {
       color: var(--ui-text-light);
-      cursor: pointer;
-      padding: 10px 0;
-      &:hover {
-        color: var(--ui-text);
+      text-transform: capitalize;
+      &.active {
+        a {
+          color: var(--ui-primary);
+        }
+      }
+      a {
+        display: block;
+        padding: 10px 0;
+        &:hover {
+          color: var(--ui-text);
+        }
       }
     }
   }
@@ -115,7 +124,7 @@ $ui-primary: #00a6ce;
     padding-left: 285px;
   }
   &__wrapper {
-    height: 2000px;
+    padding-bottom: 150px;
   }
   &__header {
     background-color: #fff;
@@ -129,8 +138,10 @@ $ui-primary: #00a6ce;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 6;
     &-title {
       color: var(--ui-text);
+      text-transform: uppercase;
     }
     &-right {
       display: flex;
@@ -173,9 +184,15 @@ $ui-primary: #00a6ce;
     box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+    position: relative;
     &:last-child {
       margin-bottom: 0;
+    }
+    &-message {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     & > p {
       color: var(--ui-text-light);
@@ -225,6 +242,68 @@ $ui-primary: #00a6ce;
     strong {
       display: block;
       margin-top: 5px;
+    }
+  }
+}
+
+.uikit-filetree {
+  display: flex;
+  flex-direction: column;
+  &-item {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--ui-border);
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ui-text);
+  }
+  &__sub {
+    padding-left: 20px;
+    background-color: #f5f8fa;
+    border-radius: 10px;
+    margin-top: 15px;
+    width: calc(100% - 20px);
+    &-item {
+      padding: 15px 0;
+      & > {
+        .uikit-filetree__sub {
+          background-color: #fff;
+          .uikit-filetree__sub {
+            background-color: #f5f8fa;
+            .uikit-filetree__sub {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.code-toolbar {
+  position: relative;
+  &:hover {
+    .toolbar {
+      opacity: 1;
+    }
+  }
+  .toolbar {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    opacity: 0;
+    .copy-to-clipboard-button {
+      padding: 5px 15px;
+      background-color: #fff;
+      border-radius: 5px;
+      color: var(--ui-text);
+      cursor: pointer;
+      font-size: 14px;
     }
   }
 }

@@ -16,73 +16,38 @@ block content
         .uikit__side-logo 
           img(src="../../images/base/babel-logo-primary.svg", alt="") 
         .uikit__side-search 
-          input(type="text", placeholder="Search...")
+          input.js-uikit-search(type="text", placeholder="Search...")
           .uikit__side-version Babel Uikit v1.1
 
-        .uikit__side-wrapper 
+        .uikit__side-wrapper.js-uikit-scroll.js-uikit-side
           .uikit__side-field 
-            .uikit__side-title.txt.txt--px18.txt--font600 GETTING STARTED
-            .uikit__side-list
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Overview
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Build
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 File Structure
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Dark Mode
+            .uikit__side-title.txt.txt--px18.txt--font600 getting started
+            ul.uikit__side-list
               
           .uikit__side-field 
-            .uikit__side-title.txt.txt--px18.txt--font600 BASE
-            .uikit__side-list
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Utilies
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Spacing
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Text
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Background
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Input Type Text
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Input Type Textarea
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Input Type Radio
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Input Type Checkbox
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Select
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Select with Select2 
+            .uikit__side-title.txt.txt--px18.txt--font600 base
+            ul.uikit__side-list
+
 
           .uikit__side-field 
-            .uikit__side-title.txt.txt--px18.txt--font600 COMPONENTS
-            .uikit__side-list
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Accordion
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Filter Tab
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Alert
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Swiper
-              .uikit__side-item
-                .txt.txt--px15.txt--font500 Tooltip
+            .uikit__side-title.txt.txt--px18.txt--font600 components
+            ul.uikit__side-list
+
               
       .uikit__content 
         .container 
           .uikit__header 
-            .uikit__header-title.txt.txt--px24.txt--font600 Overview
+            .uikit__header-title.txt.txt--px24.txt--font600.js-scroll-text Overview
             .uikit__header-right 
-              .uikit__header-btn 
+              a(href="./images/images.html" target="_blank").uikit__header-btn 
                 | Images
-              .uikit__header-btn 
+              a(href="./icons/icons-sprite.html" target="_blank").uikit__header-btn 
                 | Icons
               .uikit__header-btn.uikit__header-btn--dark
                 | Website
-          .uikit__wrapper
-            .uikit__item#overview
+          .uikit__wrapper.js-uikit-content
+            .uikit__item(data-ui-parent="getting started")#overview
+              .uikit__item-message
               .uikit-overview 
                 .uikit-overview__title Hello,
                   span Visitor 
@@ -92,31 +57,217 @@ block content
                   p Being Developed by 
                     a(href="https://www.babel.com.tr" target="_blank") Babel
                   strong all rights reserved.
-            .uikit__item#build
+            .uikit__item(data-ui-parent="getting started")#build
               p Aşağıdaki github reposundan projeyi klonlayarak indirme işlemini yapabilirsiniz.
-              pre
+              pre.mb-4
                 code(class="language-html")
                   | https://github.com/etrielQ/webpack-5-starter-kit.git
               p Sırasıyla Adımları Takip edin.
-              pre
+              pre.mb-4
                 code(class="language-html")
                   | npm install
               p Eğer hata alırsanız;
-              pre
+              pre.mb-4
                 code(class="language-html")
                   | npm install --legacy-peer-deps
               p
                 strong Kurulum Tamam. 
                 |Aşağıdaki komutu çalıştırarak projeyi çalıştırabilirsiniz.
-              pre
+              pre.mb-4
                 code(class="language-html")
                   | npm run serve
               p Son olarak Build çıktısı almak için aşağıdaki komutu uygulayabilirsiniz. 
               pre
                 code.language-html
                   | npm run build
-            .uikit__item#build
-              p Aşağıdaki github reposundan projeyi klonlayarak indirme işlemini yapabilirsiniz.
+            .uikit__item(data-ui-parent="getting started")#file-structure
+              ul.uikit-filetree 
+                li.uikit-filetree-item
+                  span Src
+                  ul.uikit-filetree__sub
+                    li.uikit-filetree__sub-item
+                      span Fonts
+                    li.uikit-filetree__sub-item
+                      span icons
+                    li.uikit-filetree__sub-item
+                      span images
+                    li.uikit-filetree__sub-item
+                      span js
+                    li.uikit-filetree__sub-item
+                      span scss
+                      ul.uikit-filetree__sub
+                        li.uikit-filetree__sub-item
+                          span common
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span _footer.scss
+                            li.uikit-filetree__sub-item
+                              span _header.scss
+                        li.uikit-filetree__sub-item
+                          span components
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span _buttons.scss
+                        li.uikit-filetree__sub-item
+                          span config
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span _config.scss
+                            li.uikit-filetree__sub-item
+                              span _fonts.scss
+                            li.uikit-filetree__sub-item
+                              span _mixins.scss
+                            li.uikit-filetree__sub-item
+                              span _normalize.scss
+                            li.uikit-filetree__sub-item
+                              span _variables.scss
+                            li.uikit-filetree__sub-item
+                              span config-index.scss
+                        li.uikit-filetree__sub-item
+                          span global
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span _global.scss
+                            li.uikit-filetree__sub-item
+                              span _uikit.scss
+                            li.uikit-filetree__sub-item
+                              span _utilies.scss
+                        li.uikit-filetree__sub-item
+                          span pages
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span _index.scss
+                            li.uikit-filetree__sub-item
+                              span _about.scss
+                        li.uikit-filetree__sub-item
+                          span style.scss
+                    li.uikit-filetree__sub-item
+                      span template
+                      ul.uikit-filetree__sub
+                        li.uikit-filetree__sub-item
+                          span common
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span footer
+                            li.uikit-filetree__sub-item
+                              span header
+                        li.uikit-filetree__sub-item
+                          span components
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span about
+                              ul.uikit-filetree__sub
+                                li.uikit-filetree__sub-item
+                                  span about-section.pug
+                            li.uikit-filetree__sub-item
+                              span index
+                              ul.uikit-filetree__sub
+                                li.uikit-filetree__sub-item
+                                  span index-section.pug
+                        li.uikit-filetree__sub-item
+                          span layout
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span layoutMain.pug
+                        li.uikit-filetree__sub-item
+                          span pages
+                          ul.uikit-filetree__sub
+                            li.uikit-filetree__sub-item
+                              span about.pug
+                            li.uikit-filetree__sub-item
+                              span index.pug
+                            li.uikit-filetree__sub-item
+                              span uikit.pug
+                li.uikit-filetree-item
+                  span .babelrc.js
+                li.uikit-filetree-item
+                  span .browserslistrc
+                li.uikit-filetree-item
+                  span .gitignore
+                li.uikit-filetree-item
+                  span package.json
+                li.uikit-filetree-item
+                  span postcss.config.js
+                li.uikit-filetree-item
+                  span README.md
+                li.uikit-filetree-item
+                  span webpack.config.js
+            .uikit__item(data-ui-parent="getting started")#dark-mode
+              p dark mode
+              pre
+                code.language-pug.javascript.
+                  .uikit__header-right 
+                    .uikit__header-btn 
+                      | Images
+                    .uikit__header-btn 
+                      | Icons
+                    .uikit__header-btn.uikit__header-btn--dark
+                      | Website
+            .uikit__item(data-ui-parent="base")#utilies
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--px15 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--px15
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--px18 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--px18
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--px24 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--px24
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--px30 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--px30
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--font300 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--font300
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--font400 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--font400
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--font500 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--font500
+              .row.d-flex.align-items-center.mb-4
+                .col-lg-6
+                  .txt.txt--font600 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--font600
+              .row.d-flex.align-items-center
+                .col-lg-6
+                  .txt.txt--font700 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, sit?
+                .col-lg-6
+                  pre
+                    code.language-pug.javascript.
+                      .txt.txt--font700
+            .uikit__item(data-ui-parent="components")#accordion
               pre
                 code.language-pug.javascript.
                   .uikit__header-right 

@@ -74,6 +74,11 @@ module.exports = {
       template: "./src/icons/icons-sprite.pug",
       inject: "body",
     }),
+    new HTMLWebpackPlugin({
+      filename: "./images/images.html",
+      template: "./src/images/images.pug",
+      inject: "body",
+    }),
   ].concat(htmlPlugins),
   module: {
     rules: [
