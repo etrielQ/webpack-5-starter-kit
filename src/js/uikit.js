@@ -1,3 +1,4 @@
+import icons from "../icons/icons"
 import Prism from "prismjs"
 import "prismjs/plugins/toolbar/prism-toolbar.js"
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min"
@@ -9,6 +10,35 @@ import SmoothScroll from "smooth-scroll"
 import Gumshoe from "gumshoejs"
 
 export default function uikit() {
+  icons.forEach(iconSpriteFn)
+  function iconSpriteFn(item, index) {
+    const iconSprite = document.querySelector("#iconSprite")
+    if (iconSprite) {
+      iconSprite.innerHTML +=
+        "<div class='icon-sprite__item'>" +
+        "<span class='icon-sprite__number'>" +
+        (index + 1) +
+        "</span>" +
+        "<div class='icon-sprite__preview'>" +
+        item.iconSvg +
+        "</div>" +
+        "<div class='icon-sprite__name'>" +
+        item.iconId +
+        "</div>" +
+        "</div>"
+    }
+
+    const icon = document.querySelectorAll(".icon")
+    if (icon) {
+      Array.prototype.forEach.call(icon, (el) => {
+        let dataIconId = el.getAttribute("data-icon-id")
+        if (dataIconId == item.iconId) {
+          el.innerHTML = item.iconSvg
+        }
+      })
+    }
+  }
+
   const uiContent = document.querySelectorAll(".js-uikit-content .uikit__item")
   const uiSide = document.querySelector(".js-uikit-side")
   uiContent.forEach((uiContent, i) => {

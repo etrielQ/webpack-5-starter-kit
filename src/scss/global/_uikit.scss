@@ -192,7 +192,12 @@ $ui-primary: #00a6ce;
     &-message {
       position: absolute;
       top: 0;
+      transform: translateY(-100%);
       left: 0;
+      background-color: #ff5050;
+      padding: 5px 15px;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
     }
     & > p {
       color: var(--ui-text-light);
