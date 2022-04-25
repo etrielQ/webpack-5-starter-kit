@@ -11,30 +11,32 @@ export default function components() {
     filterTabEl.classList.add(`filter-tab--${filterTabAnimation}`)
 
     tabItem.forEach((tabItemEl) => {
-      tabItemEl.addEventListener("click", (e) => {
-        //tab item
-        let tabItemDataFilter = tabItemEl.getAttribute("data-filter")
-        let tabItemActive = filterTabEl.querySelectorAll(".tab-item.active")
-        tabItemActive.forEach((tabItemActiveEl) => {
-          tabItemActiveEl.classList.remove("active")
-        })
-        tabItemEl.classList.add("active")
+      tabItemEl.addEventListener("click", () => {
+        if (!tabItemEl.classList.contains("active")) {
+          //tab item
+          let tabItemDataFilter = tabItemEl.getAttribute("data-filter")
+          let tabItemActive = filterTabEl.querySelectorAll(".tab-item.active")
+          tabItemActive.forEach((tabItemActiveEl) => {
+            tabItemActiveEl.classList.remove("active")
+          })
+          tabItemEl.classList.add("active")
 
-        //tab content
-        tabContent.forEach((tabContentEl) => {
-          tabContentEl.classList.add("filtering")
-          setTimeout(() => {
-            tabContentEl.classList.remove("filtering")
-            tabContentEl.classList.add("filtered")
-          }, 250)
-        })
-        tabContentParent
-          .querySelectorAll(`.${tabItemDataFilter}`)
-          .forEach((tabItemDataFilterEl) => {
+          //tab content
+          tabContent.forEach((tabContentEl) => {
+            tabContentEl.classList.add("filtering")
             setTimeout(() => {
-              tabItemDataFilterEl.classList.remove("filtered")
+              tabContentEl.classList.remove("filtering")
+              tabContentEl.classList.add("filtered")
             }, 250)
           })
+          tabContentParent
+            .querySelectorAll(`.${tabItemDataFilter}`)
+            .forEach((tabItemDataFilterEl) => {
+              setTimeout(() => {
+                tabItemDataFilterEl.classList.remove("filtered")
+              }, 250)
+            })
+        }
       })
     })
   })
