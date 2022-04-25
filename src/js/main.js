@@ -1,7 +1,9 @@
 import uikit from "./uikit.js"
+import components from "./components.js"
 import Swup from "swup"
 
 uikit()
+components()
 
 var app = {
   iconSpriteFn() {},

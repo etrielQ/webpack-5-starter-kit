@@ -1,0 +1,44 @@
+.tab {
+  &-item {
+    &.active {
+      font-weight: 600;
+    }
+  }
+}
+
+.tab-content {
+  opacity: 1;
+  animation: filteredScale $transition alternate forwards;
+
+  &.filtering {
+    animation: filteringScale $transition alternate forwards;
+  }
+
+  &.filtered {
+    display: none;
+  }
+
+  @keyframes filteringScale {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+  }
+
+  @keyframes filteredScale {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

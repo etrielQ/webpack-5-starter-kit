@@ -20,7 +20,9 @@ export default function uikit() {
         (index + 1) +
         "</span>" +
         "<div class='icon-sprite__preview'>" +
+        "<span class='icon icon-font'>" +
         item.iconSvg +
+        "</span>" +
         "</div>" +
         "<div class='icon-sprite__name'>" +
         item.iconId +

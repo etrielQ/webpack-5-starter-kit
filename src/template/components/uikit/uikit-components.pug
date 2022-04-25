@@ -1,3 +1,74 @@
+.uikit__item(data-ui-parent="components")#filter-tab
+  .row
+    .filter-tab
+      .col-lg-12
+        .filter-tab-header.d-flex.justify-content-around 
+          .tab-item.active(data-filter="filter1")
+            | Filter 1
+          .tab-item(data-filter="filter2")
+            | Filter 2
+          .tab-item(data-filter="filter3")
+            | Filter 3
+          .tab-item(data-filter="filter4")
+            | Filter 4
+      .col-lg-12
+        .filter-tab-content 
+          .tab-content.filter1
+            | Filter 1 Content
+          .tab-content.filter1
+            | Filter 1 Content Second
+          .tab-content.filter2.filtered
+            | Filter 2 Content
+          .tab-content.filter2.filter3.filtered
+            | Filter 2 Content Second
+          .tab-content.filter3.filtered
+            | Filter 3 Content
+          .tab-content.filter3.filtered
+            | Filter 3 Content Second
+          .tab-content.filter4.filtered
+            | Filter 4 Content
+          .tab-content.filter4.filtered
+            | Filter 4 Content Second
+    .filter-tab
+      .col-lg-12
+        .filter-tab-header.d-flex.justify-content-around 
+          .tab-item.active(data-filter="filter1")
+            | Filter 1
+          .tab-item(data-filter="filter2")
+            | Filter 2
+          .tab-item(data-filter="filter3")
+            | Filter 3
+          .tab-item(data-filter="filter4")
+            | Filter 4
+      .col-lg-12
+        .filter-tab-content 
+          .tab-content.filter1
+            | Filter 1 Content
+          .tab-content.filter1
+            | Filter 1 Content Second
+          .tab-content.filter2.filtered
+            | Filter 2 Content
+          .tab-content.filter2.filter3.filtered
+            | Filter 2 Content Second
+          .tab-content.filter3.filtered
+            | Filter 3 Content
+          .tab-content.filter3.filtered
+            | Filter 3 Content Second
+          .tab-content.filter4.filtered
+            | Filter 4 Content
+          .tab-content.filter4.filtered
+            | Filter 4 Content Second
+
+  pre
+    code.language-pug.javascript.
+      .uikit__header-right 
+        .uikit__header-btn 
+          | Images
+        .uikit__header-btn 
+          | Icons
+        .uikit__header-btn.uikit__header-btn--dark
+          | Website
+
 .uikit__item(data-ui-parent="components")#accordion
   pre
     code.language-pug.javascript.
