@@ -1,44 +1,61 @@
-.tab {
-  &-item {
-    &.active {
-      font-weight: 600;
+@mixin filterTabAnimation($animationName) {
+  .tab-content {
+    opacity: 1;
+    animation: filtered + $animationName $transition alternate forwards;
+    &.filtering {
+      animation: filtering + $animationName $transition alternate forwards;
     }
   }
 }
 
-.tab-content {
-  opacity: 1;
-  animation: filteredScale $transition alternate forwards;
-
-  &.filtering {
-    animation: filteringScale $transition alternate forwards;
-  }
-
-  &.filtered {
-    display: none;
-  }
-
-  @keyframes filteringScale {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    to {
-      opacity: 0;
-      transform: translateY(40px);
+.filter-tab {
+  .tab-content {
+    &.filtered {
+      display: none;
     }
   }
+  &--fade {
+    @include filterTabAnimation(Fade);
+  }
+  &--scaleY {
+    @include filterTabAnimation(ScaleY);
+  }
+}
 
-  @keyframes filteredScale {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+// keyframes
+@keyframes filteringFade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes filteredFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes filteringScaleY {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+@keyframes filteredScaleY {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
   }
 }

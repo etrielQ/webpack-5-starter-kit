@@ -4,11 +4,13 @@ export default function components() {
     const tabItem = filterTabEl.querySelectorAll(".tab-item")
     const tabContent = filterTabEl.querySelectorAll(".tab-content")
     const tabContentParent = filterTabEl.querySelector(".filter-tab-content")
+    let filterTabAnimation = filterTabEl.getAttribute("data-filter-animation")
+    filterTabEl.classList.add(`filter-tab--${filterTabAnimation}`)
+
     tabItem.forEach((tabItemEl) => {
       tabItemEl.addEventListener("click", (e) => {
         //tab item
         let tabItemDataFilter = tabItemEl.getAttribute("data-filter")
-        console.log(tabItemDataFilter)
         let tabItemActive = filterTabEl.querySelectorAll(".tab-item.active")
         tabItemActive.forEach((tabItemActiveEl) => {
           tabItemActiveEl.classList.remove("active")

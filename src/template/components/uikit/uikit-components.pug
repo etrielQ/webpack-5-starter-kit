@@ -1,6 +1,6 @@
 .uikit__item(data-ui-parent="components")#filter-tab
   .row
-    .filter-tab
+    .filter-tab(data-filter-animation="fade")
       .col-lg-12
         .filter-tab-header.d-flex.justify-content-around 
           .tab-item.active(data-filter="filter1")
@@ -15,8 +15,7 @@
         .filter-tab-content 
           .tab-content.filter1
             | Filter 1 Content
-          .tab-content.filter1
-            | Filter 1 Content Second
+
           .tab-content.filter2.filtered
             | Filter 2 Content
           .tab-content.filter2.filter3.filtered
@@ -29,7 +28,7 @@
             | Filter 4 Content
           .tab-content.filter4.filtered
             | Filter 4 Content Second
-    .filter-tab
+    .filter-tab(data-filter-animation="scaleY")
       .col-lg-12
         .filter-tab-header.d-flex.justify-content-around 
           .tab-item.active(data-filter="filter1")
