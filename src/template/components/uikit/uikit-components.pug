@@ -148,6 +148,16 @@
         }
     pre
       code.language-css.javascript.
+        @keyframes filteringScaleY {
+          from {
+            opacity: 1;
+            transform: scaleY(1);
+          }
+          to {
+            opacity: 0;
+            transform: scaleY(0);
+          }
+        }
         @keyframes filteredScaleY {
           from {
             opacity: 0;
@@ -160,13 +170,39 @@
         }
 
 .uikit__item(data-ui-parent="components")#accordion
+  .row.mb-4
+    p.txt.txt--px24.txt--font500.mb-2 Accordion
+    .accordion-container
+      .ac
+        h2.ac-header
+          button.ac-trigger(type='button') Lorem ipsum dolor sit amet.
+        .ac-panel
+          p.ac-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .ac
+        h2.ac-header
+          button.ac-trigger(type='button') Lorem ipsum dolor sit amet.
+        .ac-panel
+          p.ac-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .ac
+        h2.ac-header
+          button.ac-trigger(type='button') Lorem ipsum dolor sit amet.
+        .ac-panel
+          p.ac-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   pre
     code.language-pug.javascript.
-      .uikit__header-right 
-        .uikit__header-btn 
-          | Images
-        .uikit__header-btn 
-          | Icons
-        .uikit__header-btn.uikit__header-btn--dark
-          | Website
-          
+      .accordion-container
+        .ac
+          h2.ac-header
+            button.ac-trigger(type='button') Lorem ipsum dolor sit amet.
+          .ac-panel
+            p.ac-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .ac
+          h2.ac-header
+            button.ac-trigger(type='button') Lorem ipsum dolor sit amet.
+          .ac-panel
+            p.ac-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .ac
+          h2.ac-header
+            button.ac-trigger(type='button') Lorem ipsum dolor sit amet.
+          .ac-panel
+            p.ac-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.

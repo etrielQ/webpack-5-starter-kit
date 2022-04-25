@@ -5,7 +5,7 @@ import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min"
 import "prismjs/components/prism-markup"
 import "prismjs/components/prism-pug"
 import "prismjs/components/prism-css"
-import "prismjs/themes/prism-okaidia.css"
+import "prismjs/themes/prism-tomorrow.min.css"
 import SmoothScroll from "smooth-scroll"
 import Gumshoe from "gumshoejs"
 

@@ -1,4 +1,7 @@
+import Accordion from "accordion-js"
+import "accordion-js/dist/accordion.min.css"
 export default function components() {
+  // filter tab component
   const filterTab = document.querySelectorAll(".filter-tab")
   filterTab.forEach((filterTabEl) => {
     const tabItem = filterTabEl.querySelectorAll(".tab-item")
@@ -34,5 +37,11 @@ export default function components() {
           })
       })
     })
+  })
+
+  // accordion component
+  new Accordion(".accordion-container", {
+    duration: 400,
+    showMultiple: false,
   })
 }
