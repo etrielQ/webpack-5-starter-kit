@@ -1,5 +1,7 @@
 import Accordion from "accordion-js"
 import "accordion-js/dist/accordion.min.css"
+import toastr from "toastr"
+import "toastr/build/toastr.min.css"
 export default function components() {
   // filter tab component
   const filterTab = document.querySelectorAll(".filter-tab")
@@ -42,8 +44,34 @@ export default function components() {
   })
 
   // accordion component
-  new Accordion(".accordion-container", {
-    duration: 400,
-    showMultiple: false,
-  })
+  const accordionContainer = document.querySelector(".accordion-container")
+  if (accordionContainer) {
+    new Accordion(accordionContainer, {
+      duration: 400,
+      showMultiple: false,
+    })
+  }
+
+  toastr.options = {
+    closeButton: false,
+    debug: false,
+    newestOnTop: false,
+    progressBar: false,
+    positionClass: "toast-top-right",
+    preventDuplicates: false,
+    onclick: null,
+    showDuration: "300",
+    hideDuration: "1000",
+    timeOut: "4000",
+    extendedTimeOut: "1000",
+    showEasing: "swing",
+    hideEasing: "linear",
+    showMethod: "fadeIn",
+    hideMethod: "fadeOut",
+  }
+
+  function alertToastr(type, message) {
+    toastr[type](message)
+  }
+  window.alertToastr = alertToastr
 }

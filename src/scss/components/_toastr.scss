@@ -1,0 +1,35 @@
+.toast {
+  border-radius: 6px !important;
+  width: 400px !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+
+  &-error {
+    background-color: #df4759;
+  }
+  &-warning {
+    background-color: #ffc107;
+  }
+  &-info {
+    background-color: #467fd0;
+  }
+  &-success {
+    background-color: #42ba96;
+  }
+  &-title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  &-message {
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    top: 1px;
+  }
+  &-progress {
+    opacity: 0.3 !important;
+  }
+  &-close-button {
+    font-weight: 100 !important;
+  }
+}
