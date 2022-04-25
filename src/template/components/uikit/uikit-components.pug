@@ -231,3 +231,58 @@
       pre
         code.language-pug.javascript.
           button(onclick="alertToastr('error','this is an error message')") alert error 
+.uikit__item(data-ui-parent="components")#swiper
+  .row.mb-4
+    p.txt.txt--px24.txt--font500.mb-2 Swiper
+    .swiper(style="padding: 0 15px; height: 300px;")
+      .swiper-wrapper 
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 1
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 2
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 3
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 4
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 5
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 6
+      .swiper-pagination
+      .swiper-button-next
+      .swiper-button-prev
+    pre
+      code.language-pug.javascript.
+        .swiper
+          .swiper-wrapper 
+            .swiper-slide 1
+            .swiper-slide 2
+            .swiper-slide 3
+            .swiper-slide 4
+            .swiper-slide 5
+            .swiper-slide 6
+          .swiper-pagination
+          .swiper-button-next
+          .swiper-button-prev
+    pre
+      code.language-javascript.javascript.
+        import Swiper, { Navigation, Pagination } from "swiper"
+        import "swiper/css"
+        import "swiper/css/navigation"
+        import "swiper/css/pagination"
+
+        const swiper = new Swiper(".swiper", {
+          loop: false,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          modules: [Navigation, Pagination],
+
+          pagination: {
+            el: ".swiper-pagination",
+          },
+
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        })
+
+.uikit__item(data-ui-parent="components")#tippyjs-tooltip
+  .row.mb-4
+    p.txt.txt--px24.txt--font500.mb-2 Tippy js tooltip
+    .col-lg-6
+      button.js-tippy-tooltip(data-tippy-content="tooltip content") tooltip

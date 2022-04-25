@@ -2,6 +2,14 @@ import Accordion from "accordion-js"
 import "accordion-js/dist/accordion.min.css"
 import toastr from "toastr"
 import "toastr/build/toastr.min.css"
+import Swiper, { Navigation, Pagination } from "swiper"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import tippy from "tippy.js"
+import "tippy.js/dist/tippy.css"
+import "tippy.js/animations/scale.css"
+
 export default function components() {
   // filter tab component
   const filterTab = document.querySelectorAll(".filter-tab")
@@ -52,6 +60,7 @@ export default function components() {
     })
   }
 
+  // alert toastr component
   toastr.options = {
     closeButton: false,
     debug: false,
@@ -74,4 +83,27 @@ export default function components() {
     toastr[type](message)
   }
   window.alertToastr = alertToastr
+
+  // swiper test
+  const swiper = new Swiper(".swiper", {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    modules: [Navigation, Pagination],
+
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  })
+
+  // tippy js
+
+  tippy("[data-tippy-content]", {
+    animation: "scale",
+  })
 }

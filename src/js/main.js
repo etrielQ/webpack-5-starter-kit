@@ -6,7 +6,6 @@ uikit()
 components()
 
 var app = {
-  iconSpriteFn() {},
   load() {
     console.log("load")
   },
@@ -15,7 +14,6 @@ var app = {
   },
 
   init: function () {
-    app.iconSpriteFn()
     app.load()
   },
 }

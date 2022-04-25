@@ -11,6 +11,26 @@ $ui-primary: #00a6ce;
 .uikit {
   background-color: #f5f8fa;
 
+  pre[class*="language-"] {
+    border-radius: 10px;
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: darken($color: #2d2d2d, $amount: 15%);
+      border-radius: 15px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: darken($color: #2d2d2d, $amount: 20%);
+    }
+  }
+
   &__side {
     position: fixed;
     top: 0;
