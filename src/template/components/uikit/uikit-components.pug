@@ -1,5 +1,6 @@
 .uikit__item(data-ui-parent="components")#filter-tab
-  .row
+  .row.mb-4
+    p.txt.txt--px24.txt--font500.mb-2 Filter Tab Fade
     .filter-tab(data-filter-animation="fade")
       .col-lg-12
         .filter-tab-header.d-flex.justify-content-around 
@@ -28,6 +29,59 @@
             | Filter 4 Content
           .tab-content.filter4.filtered
             | Filter 4 Content Second
+    pre
+      code.language-pug.javascript.
+        .filter-tab(data-filter-animation="fade")
+          .filter-tab-header.d-flex.justify-content-around 
+            .tab-item.active(data-filter="filter1")
+              | Filter 1
+            .tab-item(data-filter="filter2")
+              | Filter 2
+            .tab-item(data-filter="filter3")
+              | Filter 3
+            .tab-item(data-filter="filter4")
+              | Filter 4
+          .filter-tab-content 
+            .tab-content.filter1
+              | Filter 1 Content
+            .tab-content.filter2.filtered
+              | Filter 2 Content
+            .tab-content.filter2.filter3.filtered
+              | Filter 2 Content Second
+            .tab-content.filter3.filtered
+              | Filter 3 Content
+            .tab-content.filter3.filtered
+              | Filter 3 Content Second
+            .tab-content.filter4.filtered
+              | Filter 4 Content
+            .tab-content.filter4.filtered
+              | Filter 4 Content Second
+    pre
+      code.language-css.javascript.
+        &--scaleY {
+          @include filterTabAnimation(Fade);
+        }
+    pre
+      code.language-css.javascript.
+        @keyframes filteringFade {
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
+        }
+        @keyframes filteredFade {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+  hr
+  .row.mt-4
+    p.txt.txt--px24.txt--font500.mb-2 Filter Tab ScaleY
     .filter-tab(data-filter-animation="scaleY")
       .col-lg-12
         .filter-tab-header.d-flex.justify-content-around 
@@ -58,15 +112,52 @@
           .tab-content.filter4.filtered
             | Filter 4 Content Second
 
-  pre
-    code.language-pug.javascript.
-      .uikit__header-right 
-        .uikit__header-btn 
-          | Images
-        .uikit__header-btn 
-          | Icons
-        .uikit__header-btn.uikit__header-btn--dark
-          | Website
+    pre
+      code.language-pug.javascript.
+        .filter-tab(data-filter-animation="scaleY")
+          .filter-tab-header.d-flex.justify-content-around 
+            .tab-item.active(data-filter="filter1")
+              | Filter 1
+            .tab-item(data-filter="filter2")
+              | Filter 2
+            .tab-item(data-filter="filter3")
+              | Filter 3
+            .tab-item(data-filter="filter4")
+              | Filter 4
+          .filter-tab-content 
+            .tab-content.filter1
+              | Filter 1 Content
+            .tab-content.filter1
+              | Filter 1 Content Second
+            .tab-content.filter2.filtered
+              | Filter 2 Content
+            .tab-content.filter2.filter3.filtered
+              | Filter 2 Content Second
+            .tab-content.filter3.filtered
+              | Filter 3 Content
+            .tab-content.filter3.filtered
+              | Filter 3 Content Second
+            .tab-content.filter4.filtered
+              | Filter 4 Content
+            .tab-content.filter4.filtered
+              | Filter 4 Content Second
+    pre
+      code.language-css.javascript.
+        &--scaleY {
+          @include filterTabAnimation(ScaleY);
+        }
+    pre
+      code.language-css.javascript.
+        @keyframes filteredScaleY {
+          from {
+            opacity: 0;
+            transform: scaleY(0);
+          }
+          to {
+            opacity: 1;
+            transform: scaleY(1);
+          }
+        }
 
 .uikit__item(data-ui-parent="components")#accordion
   pre
@@ -78,3 +169,4 @@
           | Icons
         .uikit__header-btn.uikit__header-btn--dark
           | Website
+          
