@@ -141,15 +141,24 @@ export default function components() {
   })
 
   // file upload
-  let fileInput = document.querySelector(".js-file-upload")
-  let fileSelect = document.querySelector(".js-file-upload-select")
-  fileSelect.onclick = function () {
-    fileInput.click()
-  }
-  fileInput.onchange = function () {
-    let selectName = document.querySelector(".js-file-upload-name")
-    if (fileInput.files.length !== 0) {
-      selectName.innerText = fileInput.files[0].name
+  const fileInput = document.querySelectorAll(".js-file-upload")
+  fileInput.forEach((fileInputEl) => {
+    let fileSelect = fileInputEl.parentNode
+    fileSelect.onclick = function () {
+      fileInputEl.click()
     }
-  }
+
+    fileInputEl.onchange = function () {
+      let selectField = fileSelect.querySelector(".js-file-upload-field")
+      for (let i = 0; i < fileInputEl.files.length; i++) {
+        console.log(fileInputEl.files)
+        const element = fileInputEl.files[i]
+        if (fileInputEl.files.length > 0) {
+          selectField.innerHTML += `<div class="input-item__file-item">
+          <span>${element.name}</span>
+          </div>`
+        }
+      }
+    }
+  })
 }

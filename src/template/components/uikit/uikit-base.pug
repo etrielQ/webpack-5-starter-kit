@@ -106,15 +106,15 @@
               strong *
     .col-lg-12.mb-4
       .input-item.input-item--file.js-file-upload-select
-        .txt.txt--font400.js-file-upload-name Dosya Seç.
+        .txt.txt--font400 Dosya Seç:
+        .input-item__file-field.js-file-upload-field 
         input.js-file-upload(type='file' name='file-upload-input')
-      pre
-        code.language-pug.javascript.
-          .input-item.input-item--textarea
-            textarea(name="", cols="30", rows="10")
-            span.input-item__placeholder
-              | placeholder
-              strong *
+    .col-lg-12.mb-4
+      .input-item.input-item--file.js-file-upload-select
+        .txt.txt--font400 Çoklu Dosya Seçimi:
+        .input-item__file-field.js-file-upload-field 
+        input.js-file-upload(type='file' multiple="multiple" name='file-upload-input')
+
     .col-lg-3.mb-4
       label.switch
         .switch__text.switch__text--first.txt--px20 text left

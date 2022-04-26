@@ -39,9 +39,17 @@
     }
     &--file {
       background: #f5f5f5 !important;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
 
       input[type="file"] {
         display: none;
+      }
+    }
+    &__file {
+      &-field {
+        margin-left: 10px;
       }
     }
     & > select {
