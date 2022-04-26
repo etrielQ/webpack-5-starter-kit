@@ -20,15 +20,15 @@
       @content;
     }
   } @else if $point==laptop-l {
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       @content;
     }
   } @else if $point==laptop-xl {
-    @media (max-width: 1540px) {
+    @media (max-width: 1539px) {
       @content;
     }
   } @else if $point==laptop {
-    @media (max-width: 1367px) {
+    @media (max-width: 1365px) {
       @content;
     }
   } @else if $point==r-laptop-s {
@@ -44,23 +44,23 @@
       @content;
     }
   } @else if $point==desktop {
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       @content;
     }
   } @else if $point==tablet-big {
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
       @content;
     }
   } @else if $point==tablet {
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       @content;
     }
   } @else if $point==tablet-small {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       @content;
     }
   } @else if $point==mobile {
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
       @content;
     }
   } @else if $point==r-desktop {
