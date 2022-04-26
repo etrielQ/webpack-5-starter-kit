@@ -104,7 +104,6 @@ export default function components() {
   })
 
   // tippy js
-
   tippy("[data-tippy-content]", {
     animation: "scale",
   })
@@ -122,4 +121,35 @@ export default function components() {
     ArrowRight: "next",
     ArrowLeft: "prev",
   })
+
+  //input
+  const inputItem = document.querySelectorAll(
+    ".input-item input, .input-item textarea"
+  )
+  inputItem.forEach((e) => {
+    e.addEventListener("focusin", () => {
+      e.parentNode.classList.add("input-item--focused")
+    })
+    e.addEventListener("focusout", () => {
+      e.parentNode.classList.remove("input-item--focused")
+      if (e.value === "") {
+        e.parentNode.classList.remove("input-item--valued")
+      } else {
+        e.parentNode.classList.add("input-item--valued")
+      }
+    })
+  })
+
+  // file upload
+  let fileInput = document.querySelector(".js-file-upload")
+  let fileSelect = document.querySelector(".js-file-upload-select")
+  fileSelect.onclick = function () {
+    fileInput.click()
+  }
+  fileInput.onchange = function () {
+    let selectName = document.querySelector(".js-file-upload-name")
+    if (fileInput.files.length !== 0) {
+      selectName.innerText = fileInput.files[0].name
+    }
+  }
 }

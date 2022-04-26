@@ -62,3 +62,108 @@
       pre
         code.language-pug.javascript.
           .txt.txt--font700
+.uikit__item(data-ui-parent="base")#form
+  .row
+    p.txt.txt--px24.txt--font500.mb-2 Input
+    .col-lg-6.mb-4
+      .input-item
+        input(type="text")
+        span.input-item__placeholder
+          | placeholder
+          strong *
+      pre
+        code.language-pug.javascript.
+          .input-item
+            input(type="text")
+            span.input-item__placeholder
+              | placeholder
+              strong *
+    .col-lg-6.mb-4
+      .input-item
+        input(type="text")
+        span.input-item__placeholder
+          | placeholder
+          strong *
+      pre
+        code.language-pug.javascript.
+          .input-item
+            input(type="text")
+            span.input-item__placeholder
+              | placeholder
+              strong *
+    .col-lg-12.mb-4
+      .input-item.input-item--textarea
+        textarea(name="", cols="30", rows="10")
+        span.input-item__placeholder
+          | placeholder
+          strong *
+      pre
+        code.language-pug.javascript.
+          .input-item.input-item--textarea
+            textarea(name="", cols="30", rows="10")
+            span.input-item__placeholder
+              | placeholder
+              strong *
+    .col-lg-12.mb-4
+      .input-item.input-item--file.js-file-upload-select
+        .txt.txt--font400.js-file-upload-name Dosya Seç.
+        input.js-file-upload(type='file' name='file-upload-input')
+      pre
+        code.language-pug.javascript.
+          .input-item.input-item--textarea
+            textarea(name="", cols="30", rows="10")
+            span.input-item__placeholder
+              | placeholder
+              strong *
+    .col-lg-3.mb-4
+      label.switch
+        .switch__text.switch__text--first.txt--px20 text left
+        input(type="checkbox")
+        span.switch__slider
+        .switch__text.switch__text--last.txt--px20 text right
+      pre
+        code.language-pug.javascript.
+          label.switch
+            .switch__text.switch__text--first.txt--px20 text left
+            input(type="checkbox")
+            span.switch__slider
+            .switch__text.switch__text--last.txt--px20 text right
+    .col-lg-3.mb-4
+      label.switch
+        input(type="checkbox")
+        span.switch__slider
+      pre
+        code.language-pug.javascript.
+          label.switch
+            input(type="checkbox")
+            span.switch__slider
+    .col-lg-3.mb-4
+      label.checkbox(for="checkbox1")
+        input(type="checkbox" name="checkbox1" id="checkbox1")
+        span.checkbox__checkmark
+        span.checkbox__txt Checkbox
+      pre
+        code.language-pug.javascript.
+          label.checkbox(for="checkbox1")
+            input(type="checkbox" name="checkbox1" id="checkbox1")
+            span.checkbox__checkmark
+            span.checkbox__txt Checkbox
+    .col-lg-3.mb-4
+      label.radio(for="radio1")
+        input(type="radio" name="radio" id="radio1" checked)
+        span.radio__checkmark
+        span.radio__txt Radio 1
+      label.radio(for="radio2")
+        input(type="radio" name="radio" id="radio2")
+        span.radio__checkmark
+        span.radio__txt Radio 2
+      label.radio(for="radio3")
+        input(type="radio" name="radio" id="radio3")
+        span.radio__checkmark
+        span.radio__txt Radio 3
+      pre
+        code.language-pug.javascript.
+          label.radio(for="radio1")
+            input(type="radio" name="radio1" id="radio1")
+            span.radio__checkmark
+            span.radio__txt Radio

@@ -1,0 +1,63 @@
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+  cursor: pointer;
+  user-select: none;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  &__checkmark {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    background-color: #eee;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transition: background-color var(--transition);
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 11px);
+      height: calc(100% - 11px);
+      border-radius: 50%;
+      background: white;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(-50%, -50%) scale(0.5);
+      transition: var(--transition);
+    }
+  }
+  &__txt {
+    padding-left: 15px;
+    font-size: 16px;
+    position: relative;
+    top: 1px;
+  }
+  input {
+    &:checked {
+      & ~ .radio__checkmark {
+        background-color: var(--ui-primary);
+      }
+    }
+  }
+  input {
+    &:checked {
+      & ~ .radio__checkmark:after {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}

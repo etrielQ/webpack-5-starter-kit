@@ -9,3 +9,7 @@ $transition-fast: 0.2s cubic-bezier(0.29, 0.13, 0.27, 0.74);
 
 /* Colors */
 $c-black: #000000;
+
+:root {
+  --transition: 0.3s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+}
