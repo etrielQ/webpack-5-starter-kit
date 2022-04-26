@@ -209,7 +209,7 @@
 
 
 .uikit__item(data-ui-parent="components")#alert-toastr
-  .row.mb-4
+  .row
     p.txt.txt--px24.txt--font500.mb-2 Alert toastr
     .col-lg-6
       button(onclick="alertToastr('info','this is an info message')") alert info click me
@@ -232,7 +232,7 @@
         code.language-pug.javascript.
           button(onclick="alertToastr('error','this is an error message')") alert error 
 .uikit__item(data-ui-parent="components")#swiper
-  .row.mb-4
+  .row
     p.txt.txt--px24.txt--font500.mb-2 Swiper
     .swiper(style="padding: 0 15px; height: 300px;")
       .swiper-wrapper 
@@ -282,7 +282,43 @@
         })
 
 .uikit__item(data-ui-parent="components")#tippyjs-tooltip
-  .row.mb-4
+  .row
     p.txt.txt--px24.txt--font500.mb-2 Tippy js tooltip
     .col-lg-6
       button.js-tippy-tooltip(data-tippy-content="tooltip content") tooltip
+    pre
+      code.language-pug.javascript.
+        button.js-tippy-tooltip(data-tippy-content="tooltip content") tooltip
+
+.uikit__item(data-ui-parent="components")#carousel-video-modal
+  .row.mb-4
+    p.txt.txt--px24.txt--font500.mb-2 fancyapps carousel + video modal
+    .col-lg-3
+      a(href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery" data-caption="Optional caption 1") 
+        img(src="https://lipsum.app/id/1/1024x768" style="width: 100%;")
+    .col-lg-3
+      a(href="https://lipsum.app/id/2/1024x768" data-fancybox="gallery" data-caption="Optional caption 2") 
+        img(src="https://lipsum.app/id/2/1024x768" style="width: 100%;")
+    .col-lg-3
+      a(href="https://lipsum.app/id/3/1024x768" data-fancybox="gallery" data-caption="Optional caption 3") 
+        img(src="https://lipsum.app/id/3/1024x768" style="width: 100%;")
+    .col-lg-3
+      a(href="https://lipsum.app/id/4/1024x768" data-fancybox="gallery" data-caption="Optional caption 4") 
+        img(src="https://lipsum.app/id/4/1024x768" style="width: 100%;")
+    .col-lg-12 
+      pre
+        code.language-pug.javascript.
+          a(href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery" data-caption="Optional caption 1") 
+            img(src="https://lipsum.app/id/1/1024x768")
+          a(href="https://lipsum.app/id/2/1024x768" data-fancybox="gallery" data-caption="Optional caption 2") 
+            img(src="https://lipsum.app/id/2/1024x768")
+          a(href="https://lipsum.app/id/3/1024x768" data-fancybox="gallery" data-caption="Optional caption 3") 
+            img(src="https://lipsum.app/id/3/1024x768")
+          a(href="https://lipsum.app/id/4/1024x768" data-fancybox="gallery" data-caption="Optional caption 4") 
+            img(src="https://lipsum.app/id/4/1024x768")
+    .col-lg-3.mt-4
+      a(href="https://www.youtube.com/watch?v=x_AN2Eonl2A&t=1s" data-fancybox) Video modal
+    .col-lg-12 
+      pre
+        code.language-pug.javascript.
+          a(href="https://www.youtube.com/watch?v=x_AN2Eonl2A&t=1s" data-fancybox) Video modal

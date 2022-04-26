@@ -9,6 +9,8 @@ import "swiper/css/pagination"
 import tippy from "tippy.js"
 import "tippy.js/dist/tippy.css"
 import "tippy.js/animations/scale.css"
+import { Fancybox } from "@fancyapps/ui"
+import "@fancyapps/ui/dist/fancybox.css"
 
 export default function components() {
   // filter tab component
@@ -105,5 +107,19 @@ export default function components() {
 
   tippy("[data-tippy-content]", {
     animation: "scale",
+  })
+
+  //fancybox
+  Fancybox.bind("[data-fancybox]", {
+    infinite: false,
+    Escape: "close",
+    Delete: "close",
+    Backspace: "close",
+    PageUp: "next",
+    PageDown: "prev",
+    ArrowUp: "next",
+    ArrowDown: "prev",
+    ArrowRight: "next",
+    ArrowLeft: "prev",
   })
 }
