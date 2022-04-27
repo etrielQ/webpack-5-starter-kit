@@ -15,28 +15,12 @@
     @media (min-width: 1530px) {
       @content;
     }
-  } @else if $point==r-laptop-l {
+  } @else if $point==r-laptop {
     @media (min-width: 1441px) {
       @content;
     }
-  } @else if $point==laptop-l {
-    @media (max-width: 1439px) {
-      @content;
-    }
-  } @else if $point==laptop-xl {
-    @media (max-width: 1539px) {
-      @content;
-    }
   } @else if $point==laptop {
-    @media (max-width: 1365px) {
-      @content;
-    }
-  } @else if $point==r-laptop-s {
-    @media (min-width: 1350px) {
-      @content;
-    }
-  } @else if $point==laptop-s {
-    @media (max-width: 1349px) {
+    @media (max-width: 1439px) {
       @content;
     }
   } @else if $point==r-desktop {
@@ -61,10 +45,6 @@
     }
   } @else if $point==mobile {
     @media (max-width: 575px) {
-      @content;
-    }
-  } @else if $point==r-desktop {
-    @media (min-width: 1200px) {
       @content;
     }
   } @else if $point==r-tablet {

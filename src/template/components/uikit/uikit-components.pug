@@ -1,9 +1,9 @@
 .uikit__item(data-ui-parent="components")#filter-tab
   .row.mb-4
-    p.txt.txt--px24.txt--font500.mb-2 Filter Tab Fade
-    .filter-tab(data-filter-animation="fade")
+    p.uikit__item-p Filter Tab Fade
+    .filter-tab(data-filter-animation="fade" style="font-size:1.6rem")
       .col-lg-12
-        .filter-tab-header.d-flex.justify-content-around 
+        .filter-tab-header.d-flex.justify-content-around
           .tab-item.active(data-filter="filter1")
             | Filter 1
           .tab-item(data-filter="filter2")
@@ -81,8 +81,8 @@
         }
   hr
   .row.mt-4
-    p.txt.txt--px24.txt--font500.mb-2 Filter Tab ScaleY
-    .filter-tab(data-filter-animation="scaleY")
+    p.uikit__item-p Filter Tab ScaleY
+    .filter-tab(data-filter-animation="scaleY" style="font-size:1.6rem")
       .col-lg-12
         .filter-tab-header.d-flex.justify-content-around 
           .tab-item.active(data-filter="filter1")
@@ -171,7 +171,7 @@
 
 .uikit__item(data-ui-parent="components")#accordion
   .row.mb-4
-    p.txt.txt--px24.txt--font500.mb-2 Accordion
+    p.uikit__item-p Accordion
     .accordion-container
       .ac
         h2.ac-header
@@ -210,7 +210,7 @@
 
 .uikit__item(data-ui-parent="components")#alert-toastr
   .row
-    p.txt.txt--px24.txt--font500.mb-2 Alert toastr
+    p.uikit__item-p Alert toastr
     .col-lg-6
       button(onclick="alertToastr('info','this is an info message')") alert info click me
       pre
@@ -233,15 +233,15 @@
           button(onclick="alertToastr('error','this is an error message')") alert error 
 .uikit__item(data-ui-parent="components")#swiper
   .row
-    p.txt.txt--px24.txt--font500.mb-2 Swiper
+    p.uikit__item-p Swiper
     .swiper(style="padding: 0 15px; height: 300px;")
       .swiper-wrapper 
-        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 1
-        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 2
-        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 3
-        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 4
-        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 5
-        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 30px; ") 6
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 3rem; ") 1
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 3rem; ") 2
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 3rem; ") 3
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 3rem; ") 4
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 3rem; ") 5
+        .swiper-slide(style="display: flex; align-items:center; justify-content: center; font-size: 3rem; ") 6
       .swiper-pagination
       .swiper-button-next
       .swiper-button-prev
@@ -283,7 +283,7 @@
 
 .uikit__item(data-ui-parent="components")#tippyjs-tooltip
   .row
-    p.txt.txt--px24.txt--font500.mb-2 Tippy js tooltip
+    p.uikit__item-p Tippy js tooltip
     .col-lg-6
       button.js-tippy-tooltip(data-tippy-content="tooltip content") tooltip
     pre
@@ -292,7 +292,7 @@
 
 .uikit__item(data-ui-parent="components")#carousel-video-modal
   .row.mb-4
-    p.txt.txt--px24.txt--font500.mb-2 fancyapps carousel + video modal
+    p.uikit__item-p fancyapps carousel + video modal
     .col-lg-3
       a(href="https://lipsum.app/id/1/1024x768" data-fancybox="gallery" data-caption="Optional caption 1") 
         img(src="https://lipsum.app/id/1/1024x768" style="width: 100%;")

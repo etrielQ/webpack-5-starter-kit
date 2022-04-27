@@ -7,9 +7,13 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: $font-family-base;
-
+  font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility !important;
