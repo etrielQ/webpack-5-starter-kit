@@ -160,7 +160,6 @@
           pre 
             code.language-pug.javascript.
               .container--fluid
-
 .uikit__item(data-ui-parent="base")#utilies
   .row.d-flex.align-items-center.mb-4
     .col-lg-6
@@ -330,3 +329,44 @@
             input(type="radio" name="radio1" id="radio1")
             span.radio__checkmark
             span.radio__txt Radio
+.uikit__item(data-ui-parent="base")#mixins
+  .row
+    p.uikit__item-p Position
+    .col-lg-6.mb-4
+      span Mixin
+      pre
+        code.language-css.javascript.
+          @mixin position($position, $top, $left, $width, $height, $content: false) {
+            @if $content {
+              content: "";
+            }
+            position: $position;
+            top: $top;
+            left: $left;
+            width: $width;
+            height: $height;
+          }
+      span Scss
+      pre
+        code.language-css.javascript.
+          .uikit-test {
+            @include position(
+              absolute,
+              0,
+              0,
+              calc(100% - 15px),
+              calc(100% - 15px),
+              $content: true
+            );
+          }
+      span Css
+      pre
+        code.language-css.javascript.
+          .uikit-test{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% - 15px);
+            height: calc(100% - 15px);
+          }

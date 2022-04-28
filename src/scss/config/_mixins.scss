@@ -77,3 +77,14 @@
     }
   }
 }
+
+@mixin position($position, $top, $left, $width, $height, $content: false) {
+  @if $content {
+    content: "";
+  }
+  position: $position;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}

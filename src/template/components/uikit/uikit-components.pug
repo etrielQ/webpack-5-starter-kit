@@ -209,25 +209,26 @@
 
 
 .uikit__item(data-ui-parent="components")#alert-toastr
-  .row
+  .row.g-5
     p.uikit__item-p Alert toastr
     .col-lg-6
-      button(onclick="alertToastr('info','this is an info message')") alert info click me
+      button.uikit-btn(onclick="alertToastr('info','this is an info message')") alert info click me
+      
       pre
         code.language-pug.javascript.
           button(onclick="alertToastr('info','this is an info message')") alert info 
     .col-lg-6
-      button(onclick="alertToastr('warning','this is an warning message')") alert warning click me
+      button.uikit-btn(onclick="alertToastr('warning','this is an warning message')") alert warning click me
       pre
         code.language-pug.javascript.
           button(onclick="alertToastr('warning','this is an warning message')") alert warning 
     .col-lg-6
-      button(onclick="alertToastr('success','this is an success message')") alert success click me
+      button.uikit-btn(onclick="alertToastr('success','this is an success message')") alert success click me
       pre
         code.language-pug.javascript.
           button(onclick="alertToastr('success','this is an success message')") alert success 
     .col-lg-6
-      button(onclick="alertToastr('error','this is an error message')") alert error click me
+      button.uikit-btn(onclick="alertToastr('error','this is an error message')") alert error click me
       pre
         code.language-pug.javascript.
           button(onclick="alertToastr('error','this is an error message')") alert error 
@@ -285,7 +286,7 @@
   .row
     p.uikit__item-p Tippy js tooltip
     .col-lg-6
-      button.js-tippy-tooltip(data-tippy-content="tooltip content") tooltip
+      button.uikit-btn.js-tippy-tooltip(data-tippy-content="tooltip content") tooltip
     pre
       code.language-pug.javascript.
         button.js-tippy-tooltip(data-tippy-content="tooltip content") tooltip
@@ -317,7 +318,7 @@
           a(href="https://lipsum.app/id/4/1024x768" data-fancybox="gallery" data-caption="Optional caption 4") 
             img(src="https://lipsum.app/id/4/1024x768")
     .col-lg-3.mt-4
-      a(href="https://www.youtube.com/watch?v=x_AN2Eonl2A&t=1s" data-fancybox) Video modal
+      a.uikit-btn(href="https://www.youtube.com/watch?v=x_AN2Eonl2A&t=1s" data-fancybox) Video modal
     .col-lg-12 
       pre
         code.language-pug.javascript.
