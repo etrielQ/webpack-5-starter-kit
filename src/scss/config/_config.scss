@@ -14,7 +14,7 @@
   }
   &__item {
     width: 100%;
-    background: #fff;
+    background: var(--ui-white);
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(#000, 0.1);

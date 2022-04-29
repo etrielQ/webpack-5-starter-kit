@@ -1,5 +1,7 @@
 $ui-primary: #00a6ce;
-:root {
+html[data-theme="default"] {
+  --ui-white: #fff;
+  --ui-bg: #f5f8fa;
   --ui-primary: #00a6ce;
   --ui-primary-light: #e5f6fa;
   --ui-secondary: #1d252c;
@@ -7,12 +9,29 @@ $ui-primary: #00a6ce;
   --ui-text-light: #7e8299;
   --ui-border: #eff2f5;
 }
+html[data-theme="dark"] {
+  --ui-white: #000b12;
+  --ui-bg: #001422;
+  --ui-primary: #00a6ce;
+  --ui-primary-light: #003050;
+  --ui-secondary: #1d252c;
+  --ui-text: #c5c5c5;
+  --ui-text-light: #7e8299;
+  --ui-border: #001828;
+  body {
+    color: #b1b1b1;
+  }
+  pre[class*="language-"] {
+    background: #001828;
+  }
+}
 
 .uikit {
-  background-color: #f5f8fa;
+  background-color: var(--ui-bg);
 
   pre[class*="language-"] {
     border-radius: 10px;
+    background: #2d2d2d;
     &::-webkit-scrollbar {
       height: 5px;
     }
@@ -37,7 +56,7 @@ $ui-primary: #00a6ce;
     left: 0;
     width: 285px;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--ui-white);
     box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
     &-logo {
       width: 100%;
@@ -58,7 +77,7 @@ $ui-primary: #00a6ce;
       input {
         width: 100%;
         height: 100%;
-        background-color: #f5f8fa;
+        background-color: var(--ui-bg);
         border: none;
         border-radius: 10px;
         padding: 0 15px;
@@ -152,7 +171,7 @@ $ui-primary: #00a6ce;
     padding-bottom: 150px;
   }
   &__header {
-    background-color: #fff;
+    background-color: var(--ui-white);
     box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
     border-radius: 0 0 10px 10px;
     padding: 20px;
@@ -184,7 +203,7 @@ $ui-primary: #00a6ce;
     }
   }
   &__item {
-    background-color: #fff;
+    background-color: var(--ui-white);
     box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
     padding: 20px;
     border-radius: 10px;
@@ -201,7 +220,7 @@ $ui-primary: #00a6ce;
       background-color: #ff5050;
       padding: 5px 15px;
       border-radius: 5px 5px 0 0;
-      color: #fff;
+      color: var(--ui-white);
       font-size: 1.6rem;
     }
     &-p {
@@ -239,11 +258,11 @@ $ui-primary: #00a6ce;
   &--dark {
     background-color: var(--ui-primary);
     border-color: var(--ui-primary);
-    color: #fff;
+    color: var(--ui-white);
     &:hover {
       background-color: darken($color: $ui-primary, $amount: 10%);
       border-color: darken($color: $ui-primary, $amount: 10%);
-      color: #fff;
+      color: var(--ui-white);
     }
   }
 }
@@ -309,7 +328,7 @@ $ui-primary: #00a6ce;
   }
   &__sub {
     padding-left: 20px;
-    background-color: #f5f8fa;
+    background-color: var(--ui-bg);
     border-radius: 10px;
     margin-top: 15px;
     width: calc(100% - 20px);
@@ -317,11 +336,11 @@ $ui-primary: #00a6ce;
       padding: 15px 0;
       & > {
         .uikit-filetree__sub {
-          background-color: #fff;
+          background-color: var(--ui-white);
           .uikit-filetree__sub {
-            background-color: #f5f8fa;
+            background-color: var(--ui-bg);
             .uikit-filetree__sub {
-              background-color: #fff;
+              background-color: var(--ui-white);
             }
           }
         }
@@ -369,7 +388,7 @@ $ui-primary: #00a6ce;
     opacity: 0;
     .copy-to-clipboard-button {
       padding: 5px 15px;
-      background-color: #fff;
+      background-color: var(--ui-white);
       border-radius: 5px;
       color: var(--ui-text);
       cursor: pointer;

@@ -145,7 +145,12 @@
     li.uikit-filetree-item
       span webpack.config.js
 .uikit__item(data-ui-parent="getting started")#dark-mode
-  p dark mode
-  pre
-    code.language-pug.javascript.
-      p working on it
+  .row
+    p.uikit__item-p Dark Mode
+    pre
+      code.language-pug.javascript.
+        label.switch
+          .switch__text.switch__text--first light
+          input(type="checkbox").js-dark-mode
+          span.switch__slider
+          .switch__text.switch__text--last dark
