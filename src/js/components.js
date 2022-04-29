@@ -166,32 +166,34 @@ export default function components() {
   let darkMode = localStorage.getItem("darkMode")
   const html = document.querySelector("html")
   const darkModeToggle = document.querySelector(".js-dark-mode")
-  const enableDarkMode = () => {
-    html.setAttribute("data-theme", "dark")
-    localStorage.setItem("darkMode", "enabled")
-    if (darkModeToggle.tagName.toLowerCase() === "input") {
-      darkModeToggle.setAttribute("checked", "checked")
+  if (darkModeToggle) {
+    const enableDarkMode = () => {
+      html.setAttribute("data-theme", "dark")
+      localStorage.setItem("darkMode", "enabled")
+      if (darkModeToggle.tagName.toLowerCase() === "input") {
+        darkModeToggle.setAttribute("checked", "checked")
+      }
     }
-  }
-  const disableDarkMode = () => {
-    html.setAttribute("data-theme", "default")
-    localStorage.setItem("darkMode", null)
-    if (darkModeToggle.tagName.toLowerCase() === "input") {
-      darkModeToggle.removeAttribute("checked")
+    const disableDarkMode = () => {
+      html.setAttribute("data-theme", "default")
+      localStorage.setItem("darkMode", null)
+      if (darkModeToggle.tagName.toLowerCase() === "input") {
+        darkModeToggle.removeAttribute("checked")
+      }
     }
-  }
-  if (darkMode === "enabled") {
-    enableDarkMode()
-  } else {
-    disableDarkMode()
-  }
-  darkModeToggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode")
-
-    if (darkMode !== "enabled") {
+    if (darkMode === "enabled") {
       enableDarkMode()
     } else {
       disableDarkMode()
     }
-  })
+    darkModeToggle.addEventListener("click", () => {
+      darkMode = localStorage.getItem("darkMode")
+
+      if (darkMode !== "enabled") {
+        enableDarkMode()
+      } else {
+        disableDarkMode()
+      }
+    })
+  }
 }
