@@ -166,26 +166,30 @@ export default function components() {
   let darkMode = localStorage.getItem("darkMode")
   const html = document.querySelector("html")
   const darkModeToggle = document.querySelector(".js-dark-mode")
-  if (darkModeToggle) {
-    const enableDarkMode = () => {
-      html.setAttribute("data-theme", "dark")
-      localStorage.setItem("darkMode", "enabled")
+  const enableDarkMode = () => {
+    html.setAttribute("data-theme", "dark")
+    localStorage.setItem("darkMode", "enabled")
+    if (darkModeToggle) {
       if (darkModeToggle.tagName.toLowerCase() === "input") {
         darkModeToggle.setAttribute("checked", "checked")
       }
     }
-    const disableDarkMode = () => {
-      html.setAttribute("data-theme", "default")
-      localStorage.setItem("darkMode", null)
+  }
+  const disableDarkMode = () => {
+    html.setAttribute("data-theme", "default")
+    localStorage.setItem("darkMode", null)
+    if (darkModeToggle) {
       if (darkModeToggle.tagName.toLowerCase() === "input") {
         darkModeToggle.removeAttribute("checked")
       }
     }
-    if (darkMode === "enabled") {
-      enableDarkMode()
-    } else {
-      disableDarkMode()
-    }
+  }
+  if (darkMode === "enabled") {
+    enableDarkMode()
+  } else {
+    disableDarkMode()
+  }
+  if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
       darkMode = localStorage.getItem("darkMode")
 
