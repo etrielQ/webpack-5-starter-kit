@@ -20,6 +20,7 @@ html[data-theme="dark"] {
   --ui-border: #001828;
   body {
     color: #b1b1b1;
+    background-color: var(--ui-white);
   }
   pre[class*="language-"] {
     background: #001828;
@@ -58,6 +59,9 @@ html[data-theme="dark"] {
     height: 100%;
     background-color: var(--ui-white);
     box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
+    @include bp(tablet) {
+      transform: translateX(-100%);
+    }
     &-logo {
       width: 100%;
       padding: 20px 20px 15px 20px;
@@ -166,6 +170,9 @@ html[data-theme="dark"] {
   }
   &__content {
     padding-left: 285px;
+    @include bp(tablet) {
+      padding-left: 0;
+    }
   }
   &__wrapper {
     padding-bottom: 150px;

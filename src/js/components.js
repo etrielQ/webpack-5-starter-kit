@@ -184,11 +184,13 @@ export default function components() {
       }
     }
   }
+
   if (darkMode === "enabled") {
     enableDarkMode()
   } else {
     disableDarkMode()
   }
+
   if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
       darkMode = localStorage.getItem("darkMode")
