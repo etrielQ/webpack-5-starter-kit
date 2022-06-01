@@ -26,6 +26,15 @@ html(lang="en" data-theme="")
   body 
 
     include ../common/header
+    .front-ui
+      .front-ui-button
+        a(href="/uikit.html" target="_blank").front-ui-button-item Uikit
+        a(href="/icons/icons-sprite.html" target="_blank").front-ui-button-item Icon Sprite
+        a(href="#0").front-ui-button-item.js-uikit-pages-dropdown Pages
+      .front-ui-dropdown.custom-scrollbar
+        a(href="/index.html").front-ui-dropdown-item index
+        a(href="/about.html").front-ui-dropdown-item about
+        
     
     block content 
 
