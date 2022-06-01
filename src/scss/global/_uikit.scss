@@ -31,10 +31,10 @@ html[data-theme="dark"] {
   background-color: var(--ui-bg);
 
   pre[class*="language-"] {
-    border-radius: 10px;
+    border-radius: 1rem;
     background: #2d2d2d;
     &::-webkit-scrollbar {
-      height: 5px;
+      height: 0.5rem;
     }
 
     &::-webkit-scrollbar-track {
@@ -43,7 +43,7 @@ html[data-theme="dark"] {
 
     &::-webkit-scrollbar-thumb {
       background: darken($color: #2d2d2d, $amount: 15%);
-      border-radius: 15px;
+      border-radius: 1.5rem;
     }
 
     &::-webkit-scrollbar-thumb:hover {
@@ -55,17 +55,17 @@ html[data-theme="dark"] {
     position: fixed;
     top: 0;
     left: 0;
-    width: 285px;
+    width: 28.5rem;
     height: 100%;
     background-color: var(--ui-white);
-    box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
+    box-shadow: 0, 0, 2.8rem, 0, rgba(82, 63, 105, 0.03%);
     @include bp(tablet) {
       transform: translateX(-100%);
     }
     &-logo {
       width: 100%;
-      padding: 20px 20px 15px 20px;
-      height: 90px;
+      padding: 2rem 2rem 1.5rem 2rem;
+      height: 9rem;
 
       img {
         width: 100%;
@@ -74,17 +74,17 @@ html[data-theme="dark"] {
       }
     }
     &-search {
-      height: 70px;
-      padding: 0px 20px 25px 20px;
-      border-bottom: 1px solid var(--ui-border);
+      height: 7rem;
+      padding: 0 2rem 2.5rem 2rem;
+      border-bottom: 0.1rem solid var(--ui-border);
       position: relative;
       input {
         width: 100%;
         height: 100%;
         background-color: var(--ui-bg);
         border: none;
-        border-radius: 10px;
-        padding: 0 15px;
+        border-radius: 1rem;
+        padding: 0 1.5rem;
         font-size: 1.4rem;
         font-weight: 500;
       }
@@ -95,17 +95,17 @@ html[data-theme="dark"] {
       left: 50%;
       transform: translateY(50%) translateX(-50%);
       background-color: var(--ui-primary-light);
-      padding: 5px;
+      padding: 0.5rem;
       color: var(--ui-primary);
-      border-radius: 5px;
+      border-radius: 0.5rem;
       font-size: 1.3rem;
       line-height: 1em;
       font-weight: 500;
     }
     &-wrapper {
-      padding: 20px 20px 20px 20px;
+      padding: 2rem 2rem 2rem 2rem;
       overflow-y: auto;
-      max-height: calc(100vh - 100px - 60px);
+      max-height: calc(100vh - 10rem - 6rem);
       overscroll-behavior: contain;
       &:hover {
         &::-webkit-scrollbar {
@@ -113,7 +113,7 @@ html[data-theme="dark"] {
         }
       }
       &::-webkit-scrollbar {
-        width: 5px;
+        width: 0.5rem;
         display: none;
       }
 
@@ -123,7 +123,7 @@ html[data-theme="dark"] {
 
       &::-webkit-scrollbar-thumb {
         background: darken($color: #eff2f5, $amount: 5%);
-        border-radius: 15px;
+        border-radius: 1.5rem;
       }
 
       &::-webkit-scrollbar-thumb:hover {
@@ -131,9 +131,9 @@ html[data-theme="dark"] {
       }
     }
     &-field {
-      margin-bottom: 15px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid var(--ui-border);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 0.1rem solid var(--ui-border);
 
       &:last-child {
         padding-bottom: 0;
@@ -143,7 +143,7 @@ html[data-theme="dark"] {
     }
     &-title {
       color: var(--ui-text);
-      padding: 10px 0;
+      padding: 1rem 0;
       text-transform: uppercase;
       font-size: 1.6rem;
       font-weight: 600;
@@ -158,7 +158,7 @@ html[data-theme="dark"] {
       }
       a {
         display: block;
-        padding: 10px 0;
+        padding: 1rem 0;
         font-size: 1.6rem;
         font-weight: 400;
 
@@ -169,23 +169,23 @@ html[data-theme="dark"] {
     }
   }
   &__content {
-    padding-left: 285px;
+    padding-left: 28.5rem;
     @include bp(tablet) {
       padding-left: 0;
     }
   }
   &__wrapper {
-    padding-bottom: 150px;
+    padding-bottom: 15rem;
   }
   &__header {
     background-color: var(--ui-white);
-    box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
-    border-radius: 0 0 10px 10px;
-    padding: 20px;
+    box-shadow: 0, 0, 2.8rem, 0, rgba(82, 63, 105, 0.03%);
+    border-radius: 0 0 1rem 1rem;
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -202,7 +202,7 @@ html[data-theme="dark"] {
       justify-content: flex-end;
     }
     .uikit-btn {
-      margin-right: 20px;
+      margin-right: 2rem;
 
       &:last-child {
         margin-right: 0;
@@ -211,10 +211,10 @@ html[data-theme="dark"] {
   }
   &__item {
     background-color: var(--ui-white);
-    box-shadow: 0, 0, 28px, 0, rgba(82, 63, 105, 0.03%);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 150px;
+    box-shadow: 0, 0, 2.8rem, 0, rgba(82, 63, 105, 0.03%);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 15rem;
     position: relative;
     &:last-child {
       margin-bottom: 0;
@@ -225,8 +225,8 @@ html[data-theme="dark"] {
       transform: translateY(-100%);
       left: 0;
       background-color: #ff5050;
-      padding: 5px 15px;
-      border-radius: 5px 5px 0 0;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem 0.5rem 0 0;
       color: var(--ui-white);
       font-size: 1.6rem;
     }
@@ -241,15 +241,15 @@ html[data-theme="dark"] {
       font-size: 1.4rem;
     }
     & > pre {
-      margin: 15px 0 30px 0 !important;
+      margin: 1.5rem 0 3rem 0 !important;
     }
   }
 }
 
 .uikit-btn {
-  padding: 15px 25px;
-  border: 1px solid var(--ui-border);
-  border-radius: 10px;
+  padding: 1.5rem 2.5rem;
+  border: 0.1rem solid var(--ui-border);
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,7 +283,7 @@ html[data-theme="dark"] {
   &__title {
     font-size: 3.4rem;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
     color: var(--ui-text);
 
     span {
@@ -298,21 +298,21 @@ html[data-theme="dark"] {
   &__txt {
     color: var(--ui-text-light);
     font-size: 2.2rem;
-    max-width: 650px;
-    margin: 20px 0;
+    max-width: 65rem;
+    margin: 2rem 0;
   }
   &__copyright {
     color: var(--ui-text);
-    border-top: 1px solid var(--ui-border);
+    border-top: 0.1rem solid var(--ui-border);
     width: 100%;
-    padding-top: 20px;
+    padding-top: 2rem;
     font-size: 1.6rem;
     a {
       color: var(--ui-primary);
     }
     strong {
       display: block;
-      margin-top: 5px;
+      margin-top: 0.5rem;
     }
   }
 }
@@ -322,8 +322,8 @@ html[data-theme="dark"] {
   flex-direction: column;
   &-item {
     width: 100%;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--ui-border);
+    padding: 1.5rem 0;
+    border-bottom: 0.1rem solid var(--ui-border);
     &:last-child {
       border-bottom: none;
     }
@@ -334,13 +334,13 @@ html[data-theme="dark"] {
     color: var(--ui-text);
   }
   &__sub {
-    padding-left: 20px;
+    padding-left: 2rem;
     background-color: var(--ui-bg);
-    border-radius: 10px;
-    margin-top: 15px;
-    width: calc(100% - 20px);
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    width: calc(100% - 2rem);
     &-item {
-      padding: 15px 0;
+      padding: 1.5rem 0;
       & > {
         .uikit-filetree__sub {
           background-color: var(--ui-white);
@@ -360,14 +360,14 @@ html[data-theme="dark"] {
   &__row {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--ui-border);
+    border-bottom: 0.1rem solid var(--ui-border);
     &:last-child {
       border-bottom: none;
     }
   }
   &__item {
     width: 100%;
-    margin-right: 25px;
+    margin-right: 2.5rem;
     &:not(:last-child) {
       color: var(--ui-text);
       text-transform: capitalize;
@@ -394,9 +394,9 @@ html[data-theme="dark"] {
     right: 1em;
     opacity: 0;
     .copy-to-clipboard-button {
-      padding: 5px 15px;
+      padding: 0.5rem 1.5rem;
       background-color: var(--ui-white);
-      border-radius: 5px;
+      border-radius: 0.5rem;
       color: var(--ui-text);
       cursor: pointer;
       font-size: 1.4rem;

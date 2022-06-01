@@ -15,11 +15,11 @@
   }
   &__checkmark {
     position: relative;
-    height: 25px;
-    width: 25px;
+    height: 2.5rem;
+    width: 2.5rem;
     background-color: #eee;
     flex-shrink: 0;
-    border-radius: 6px;
+    border-radius: 0.6rem;
     transition: background-color var(--transition);
     &:after {
       content: "";
@@ -33,15 +33,15 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0.5);
-      width: calc(100% - 11px);
-      height: calc(100% - 11px);
+      width: calc(100% - 1.1rem);
+      height: calc(100% - 1.1rem);
     }
   }
   &__txt {
-    padding-left: 15px;
+    padding-left: 1.5rem;
     font-size: 1.6rem;
     position: relative;
-    top: 1px;
+    top: 0.1rem;
   }
   input {
     &:checked {
