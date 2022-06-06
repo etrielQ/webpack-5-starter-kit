@@ -1,78 +1,78 @@
 @mixin bp($point) {
   @if $point==desktop-l {
-    @media (max-width: 192rem) {
+    @media (max-width: 1920px) {
       @content;
     }
   } @else if $point==r-desktop-l {
-    @media (min-width: 192rem) {
+    @media (min-width: 1920px) {
       @content;
     }
   } @else if $point==desktop-m {
-    @media (max-width: 152.9rem) {
+    @media (max-width: 1529px) {
       @content;
     }
   } @else if $point==r-desktop-m {
-    @media (min-width: 153rem) {
+    @media (min-width: 1530px) {
       @content;
     }
   } @else if $point==r-laptop {
-    @media (min-width: 144.1rem) {
+    @media (min-width: 1441px) {
       @content;
     }
   } @else if $point==laptop {
-    @media (max-width: 143.9rem) {
+    @media (max-width: 1439px) {
       @content;
     }
   } @else if $point==r-desktop {
-    @media (min-width: 120.1rem) {
+    @media (min-width: 1201px) {
       @content;
     }
   } @else if $point==desktop {
-    @media (max-width: 119.9rem) {
+    @media (max-width: 1199px) {
       @content;
     }
   } @else if $point==tablet-big {
-    @media (max-width: 102.3rem) {
+    @media (max-width: 1023px) {
       @content;
     }
   } @else if $point==tablet {
-    @media (max-width: 99.1rem) {
+    @media (max-width: 991px) {
       @content;
     }
   } @else if $point==tablet-small {
-    @media (max-width: 76.7rem) {
+    @media (max-width: 767px) {
       @content;
     }
   } @else if $point==mobile {
-    @media (max-width: 57.5rem) {
+    @media (max-width: 575px) {
       @content;
     }
   } @else if $point==r-tablet {
-    @media (min-width: 99.3rem) {
+    @media (min-width: 993px) {
       @content;
     }
   } @else if $point==r-tablet-small {
-    @media (min-width: 76.9rem) {
+    @media (min-width: 769px) {
       @content;
     }
   } @else if $point==r-mobile {
-    @media (min-width: 57.6rem) {
+    @media (min-width: 576px) {
       @content;
     }
   } @else if $point==mobile-small {
-    @media (max-width: 48rem) {
+    @media (max-width: 480px) {
       @content;
     }
   } @else if $point==mobile-l-small {
-    @media (max-width: 42.4rem) {
+    @media (max-width: 424px) {
       @content;
     }
   } @else if $point==mobile-m-small {
-    @media (max-width: 37.4rem) {
+    @media (max-width: 374px) {
       @content;
     }
   } @else if $point==mobile-x-small {
-    @media (max-width: 35rem) {
+    @media (max-width: 350px) {
       @content;
     }
   }
