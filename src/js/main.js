@@ -4,6 +4,12 @@ import Swup from "swup"
 
 uikit()
 components()
+function uikitPageDropdown() {
+  $(".js-uikit-pages-dropdown").on("click", (e) => {
+    $(".front-ui-dropdown").toggleClass("active")
+  })
+}
+uikitPageDropdown()
 
 var app = {
   load() {
