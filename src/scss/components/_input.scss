@@ -4,24 +4,24 @@
     position: relative;
     transition: var(--transition);
     background: var(--ui-bg);
-    border-radius: 6px;
-    border: 1px solid transparent;
+    border-radius: 0.6rem;
+    border: 0.1rem solid transparent;
 
     &--textarea {
       .input-item__placeholder {
         transform: none;
-        top: 20px;
+        top: 2rem;
       }
       &.input-item--valued {
         border-color: transparent;
         .input-item__placeholder {
-          top: 8px !important;
+          top: 0.8rem !important;
         }
       }
       &.input-item--focused {
         border-color: var(--ui-primary);
         .input-item__placeholder {
-          top: 8px !important;
+          top: 0.8rem !important;
         }
       }
     }
@@ -37,12 +37,12 @@
     }
     &__file {
       &-field {
-        margin-left: 10px;
+        margin-left: 1rem;
       }
     }
     & > select {
       position: relative;
-      top: -0px !important;
+      top: 0 !important;
       width: 95% !important;
     }
     & > input,
@@ -50,7 +50,7 @@
     & > textarea,
     &--file {
       width: 100%;
-      padding: 16px 25px;
+      padding: 1.6rem 2.5rem;
       border: none;
       outline: none;
       font-size: 1.6rem;
@@ -59,7 +59,7 @@
       background: transparent;
       position: relative;
       color: var(--ui-text);
-      top: 2px;
+      top: 0.2rem;
       &:-webkit-autofill {
         & ~ .input-item__placeholder {
           top: 25%;
@@ -82,9 +82,9 @@
       font-weight: 400;
       font-size: 1.6rem;
       position: absolute;
-      top: calc(50% + 1px);
+      top: calc(50% + 0.1rem);
       line-height: 1em;
-      left: 25px;
+      left: 2.5rem;
       transform: translateY(-50%);
       transition: var(--transition);
       pointer-events: none;

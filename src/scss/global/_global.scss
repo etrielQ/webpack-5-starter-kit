@@ -20,12 +20,12 @@ body {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 10rem 0;
 
   @include bp(tablet) {
-    padding: 75px 0;
+    padding: 7.5rem 0;
   }
   @include bp(tablet-small) {
-    padding: 50px 0;
+    padding: 5rem 0;
   }
 }

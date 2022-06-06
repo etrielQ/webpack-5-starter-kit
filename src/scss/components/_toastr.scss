@@ -1,6 +1,6 @@
 .toast {
-  border-radius: 6px !important;
-  width: 400px !important;
+  border-radius: 0.6rem !important;
+  width: 40rem !important;
   opacity: 1 !important;
   box-shadow: none !important;
 
@@ -24,7 +24,7 @@
     font-weight: 400;
     font-size: 1.6rem;
     position: relative;
-    top: 1px;
+    top: 0.1rem;
   }
   &-progress {
     opacity: 0.3 !important;

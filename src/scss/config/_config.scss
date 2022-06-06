@@ -1,24 +1,24 @@
 .icon-sprite {
   &__title {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 3rem;
     font-size: 4rem;
   }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 2rem;
   }
   &__item {
     width: 100%;
     background: var(--ui-white);
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(#000, 0.1);
-    border-radius: 10px;
+    border: 0.1rem solid rgba(#000, 0.1);
+    border-radius: 1rem;
     align-items: center;
     &:last-child {
       margin-right: 0;
@@ -26,14 +26,14 @@
   }
   &__name,
   &__number {
-    padding: 5px;
+    padding: 0.5rem;
     text-align: center;
   }
   &__preview {
     width: 100%;
-    height: 50px;
-    padding: 5px;
-    margin: 0px 0;
+    height: 5rem;
+    padding: 0.5rem;
+    margin: 0 0;
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
@@ -58,45 +58,45 @@
 }
 
 .container {
-  max-width: 1360px;
+  max-width: 136rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 
   &--sm {
-    max-width: 1280px;
+    max-width: 128rem;
   }
   &--fluid {
     max-width: 100%;
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   &,
   &--sm {
-    @include bp(laptop-l) {
-      max-width: 1150px;
+    @include bp(laptop) {
+      max-width: 115rem;
     }
     @include bp(desktop) {
-      max-width: 960px;
+      max-width: 96rem;
     }
     @include bp(tablet) {
-      max-width: 720px;
+      max-width: 72rem;
     }
     @include bp(tablet-small) {
-      max-width: 520px;
+      max-width: 52rem;
     }
     @include bp(mobile) {
       max-width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
     @include bp(mobile-x-small) {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
 }

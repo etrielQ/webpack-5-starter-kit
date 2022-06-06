@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
   cursor: pointer;
   user-select: none;
   &:last-child {
@@ -16,8 +16,8 @@
   }
   &__checkmark {
     position: relative;
-    height: 24px;
-    width: 24px;
+    height: 2.4rem;
+    width: 2.4rem;
     background-color: #eee;
     flex-shrink: 0;
     border-radius: 50%;
@@ -28,8 +28,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: calc(100% - 11px);
-      height: calc(100% - 11px);
+      width: calc(100% - 1.1rem);
+      height: calc(100% - 1.1rem);
       border-radius: 50%;
       background: white;
       opacity: 0;
@@ -39,10 +39,10 @@
     }
   }
   &__txt {
-    padding-left: 15px;
+    padding-left: 1.5rem;
     font-size: 1.6rem;
     position: relative;
-    top: 1px;
+    top: 0.1rem;
   }
   input {
     &:checked {
