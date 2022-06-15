@@ -1,6 +1,6 @@
 import uikit from "./uikit.js"
 import components from "./components.js"
-import Swup from "swup"
+// import Swup from "swup"
 
 uikit()
 components()
@@ -31,14 +31,14 @@ function docResized(fn) {
   window.addEventListener("resize", fn)
 }
 docReadied(() => {
-  const swup = new Swup({
-    cache: true,
-  })
-  swup.on("contentReplaced", function () {
-    swup.options.containers.forEach(() => {
-      app.iconSpriteFn()
-    })
-  })
+  // const swup = new Swup({
+  //   cache: true,
+  // })
+  // swup.on("contentReplaced", function () {
+  //   swup.options.containers.forEach(() => {
+  //     app.iconSpriteFn()
+  //   })
+  // })
   app.init()
 })
 

@@ -54,13 +54,37 @@ export default function components() {
   })
 
   // accordion component
-  const accordionContainer = document.querySelector(".accordion-container")
-  if (accordionContainer) {
-    new Accordion(accordionContainer, {
-      duration: 400,
-      showMultiple: false,
-    })
-  }
+  $("body").on("click", ".js-accordion-trigger", function () {
+    $(this).toggleClass("active")
+    const accordionGroup = $(this).closest(".accordion-wrapper")
+    const item = $(this).closest(".accordion-item")
+    let multipleShow = false
+
+    if (accordionGroup.data("multiple-show") == true) {
+      multipleShow = true
+    } else {
+      $(".js-accordion-trigger").not(this).removeClass("active")
+    }
+    let content = item.find(".accordion-calc")
+    let contentHeight = content.outerHeight(true)
+    console.log(contentHeight)
+    if (item.hasClass("active") && !$(this).hasClass("force-open")) {
+      item.find(".accordion-content").css("height", 0 + "px")
+      item.removeClass("active")
+    } else {
+      if (!multipleShow) {
+        accordionGroup.children(".accordion-item").removeClass("active")
+        accordionGroup
+          .children(".accordion-item")
+          .find(".accordion-content")
+          .css("height", 0 + "px")
+      }
+      item.addClass("active")
+      item.find(".accordion-content").css("height", contentHeight)
+    }
+  })
+
+  $(".accordion-item.opened .js-accordion-trigger").trigger("click")
 
   // alert toastr component
   toastr.options = {
